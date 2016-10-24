@@ -11,17 +11,22 @@
 			<div class="container"><!--центровщик-->
 				<div class="logo-header">Техномарт</div>
 				<div class="search">
-					<img src="http://placehold.it/150x100" alt="">
+					<form action="https://echo.htmlacademy.ru" method="get">
+						<button name="search">
+							
+						</button>
+						<input type="search" name="search">
+					</form>
 					
 				</div>
 				<div class="bookmarks">
-					<img src="http://placehold.it/150x100" alt="">
-					<span>Закладки</span>
+					<a href="#">Закладки</a>
+					<span class="bookmarks-counter">0</span>
 					
 				</div>
 				<div class="cart">
-					<img src="http://placehold.it/150x100" alt="">
-					<span>Корзина</span>
+					<a href="#">Корзина</a>
+					<span class="cart-counter">0</span>
 					
 				</div>
 				<div class="checkout">
@@ -41,14 +46,14 @@
 					</div>
 					<p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 				</div>
-				<section class="login-registration">
+				<div class="userblock">
 					<div class="username">
 						<span></span>
-						<a href="#">Переход в ЛК</a> <!--как оформить стрелку?-->
+						<a href="#">Переход в ЛК</a>
 					</div>
 					<a href="#">Войти</a>
 					<a href="#">Регистрация</a>
-				</section>
+				</div>
 			</section>
 			<nav class="navigation">
 				<ul>
@@ -73,20 +78,21 @@
 				<h4 class="goods-filtr.header">Сортировка</h4>
 				<div class="price-filtr">
 					<h5>Цена:</h5>
-					<input type="range" min="0" max="40000" step="100">
+					<input type="range" name="good-price" min="0" max="40000" step="100">
 				</div>
 				<div class="manufacture-filtr">
 					<h5>Производители:</h5>
-					<label><input type="checkbox" name="Bosch" checked="">Bosch</label>
-					<label><input type="checkbox" name="interskol">Интерскол</label>
-					<label><input type="checkbox" name="Makita" checked="">Makita</label>
-					<label><input type="checkbox" name="Dewalt">Dewalt</label>
-					<label><input type="checkbox" name="Hitachi">Hitachi</label>
+
+					<input type="checkbox" name="Bosch" checked="" id="Bosch"><label for="Bosch">Bosch</label>
+					<input type="checkbox" name="interskol" id=""><label for="interskol">Интерскол</label>
+					<input type="checkbox" name="Makita" checked="" id=""><label for="Makita">Makita</label>
+					<input type="checkbox" name="Dewalt" id=""><label for="Dewalt"></label>
+					<input type="checkbox" name="Hitachi" id=""><label for="Hitachi">Hitachi</label>
 				</div>
 				<div class="power-filtr">
 					<h5>Питание:</h5>
-					<label><input type="radio" name="accumulator">Аккумуляторные</label>
-					<label><input type="radio" name="net">Сетевые</label>
+					<input type="radio" name="power-kind" checked="" id="accumulator"><label for="accumulator">Аккумуляторные</label>
+					<input type="radio" name="power-kind" id="net"><label for="net">Сетевые</label>
 
 				</div>
 				<input type="submit" value="Показать">
@@ -94,9 +100,11 @@
 			<section class="goods-list">
 				<div class="sorting-criterion">
 					<h4 class="sorting-header">Сортировка</h4>
-					<a href="#" class="price-sorting">По цене</a>
-					<a href="#" class="type-sorting">По типу</a>
-					<a href="#" class="functionality-sorting">По функционалу</a>
+					<button class="price-sorting">По цене</button>
+					<button class="type-sorting">По типу</button>
+					<button class="functionality-sorting">По функционалу</button>
+					<button></button>
+					<button></button>
 				</div>
 				<div class="goods-item">
 					<img src="http://placehold.it/150x100" alt="">
@@ -179,7 +187,7 @@
 					<span class="old-price">22500 Р.</span>
 					<span class="new-price">15500 Р.</span>
 				</div>
-				<div class="pages-listing">
+				<div class="paginator">
 					<a href="#">1</a>
 					<a href="#">2</a>
 					<a href="#">3</a>
@@ -211,25 +219,22 @@
 					<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
 					+7 (812) 555-05-55</p>
 				</div>
-				<div class="footer-navigation">
 					<nav class="menu-company">
-						<ul>
+						<ul class="menu-company">
 							<li><a href="#">Компания</a></li>
 							<li><a href="#">Новости</a></li>
 							<li><a href="#">Каталог</a></li>
 							<li><a href="#">Доставка</a></li>
 							<li><a href="#">Контакты</a></li>
 						</ul>
-					</nav>
-					<nav class="menu-goods">
-						<ul>
+						<ul class="menu-goods">
 							<li><a href="#">Материалы</a></li>
 							<li><a href="#">Техника</a></li>
 							<li><a href="#">Инструменты</a></li>
 							<li><a href="#">Спецпредложения</a></li>
 						</ul>
 					</nav>
-				</div>
+
 			</div>
 		</div>
 		<div class="footer-bottom">
