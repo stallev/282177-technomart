@@ -64,7 +64,7 @@ header{
 	line-height: 18px;
 	font-style: normal;
 	color: #e9292a;
-	/*V/A optical как перевести в css?*/
+										/*V/A optical как перевести в css?*/
 }
 .navigation{
 	height: 55px;
@@ -103,7 +103,7 @@ header{
 	line-height: 30px;
 	font-weight: bold;
 }
-.categories..slider{
+.categories .slider{
 	background-image: url(img/slider-background.jpg);
 }
 .goods{/* начнем с 850 и закончим 1280, товар заканчивается на 1268*/
