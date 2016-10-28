@@ -1,11 +1,17 @@
+html{
+	
+}
 body{
-	font-family: 'PT Sans', Arial, sans-serif;
+	font-family: 'Cuprum', Arial, sans-serif;
 	font-size: 13px;
 	line-height: 24px;
 	color: #000;
 	font-style: normal;
 	font-weight: normal;
 	background-color: #fff;
+	margin: 0 auto;
+	padding: 0;
+	width: 1200px;
 }
 h2{
 	font-family: 'Cuprum', Arial, sans-serif;
@@ -13,9 +19,15 @@ h2{
 	line-height: 30px;
 	font-weight: bold;
 	text-transform: uppercase;
+	color: #32425c;
 }
 header{
 
+}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
 }
 .upper-header{
 	font-family: 'Cuprum', Arial, sans-serif;
@@ -23,6 +35,67 @@ header{
 	font-size: 17px;
 	line-height: 18px;
 	color: #fff;
+	height: 42px;
+}
+.container{
+	width: 940px;
+	margin: 0 auto;
+}
+.uppers>div{
+	display: inline-block;
+}
+.uppers a{
+	display: block;	
+}
+.middle-header{
+	height: 160px;
+}
+.middle-header>div{
+	display: inline-block;
+}
+.store-descripton{
+	font-size: 16px;
+	line-height: 23px;
+	font-style: italic;
+	color: #ee3643;
+}
+.store-contacts a{
+	font-size: 21px;
+	line-height: 18px;
+	font-style: normal;
+	color: #e9292a;
+	/*V/A optical как перевести в css?*/
+}
+.navigation{
+	height: 55px;
+	background-color: #32425c;
+	border-bottom: 5px solid #293449;
+	padding: 12px 52px;
+	margin-bottom: 120px;
+}
+.navigation li{
+	display: inline-block;
+
+}
+.navigation a{
+	display: block;
+	color: #e0e2e5;
+	font-style: normal;
+	font-size: 17px;
+	line-height: 17px;
+}
+.categories{					/*заканчивается раздел на 788*/
+	height: 410px;
+}
+.categories .tile{
+	width: 300px;
+	height: 123px;
+	float: left;
+}
+.categories .slider{
+	width: 620px;
+	height: 265px;
+	float: left;
 }
 .categories h3{
 	font-family: 'Cuprum', Arial, sans-serif;
@@ -30,6 +103,55 @@ header{
 	line-height: 30px;
 	font-weight: bold;
 }
-.categories. .slider{
+.categories..slider{
 	background-image: url(img/slider-background.jpg);
+}
+.goods{/* начнем с 850 и закончим 1280, товар заканчивается на 1268*/
+	margin-top: 62px;
+	height: 430px;
+	padding-bottom: 12px;
+}
+.goods-header{
+	height: 80px;
+}
+.goods-header .h2{
+	width: 320px;	
+	padding:25px 20px;
+	font-size: 30px;
+	line-height: 30px;
+	font-style: normal;
+	text-transform: uppercase;
+	float: left;								/*лучший ли это вариант?*/
+}
+.goods-header .to-more-information{
+	width: 252px;
+	height: 38px;
+	float: right; 								/*лучший ли это вариант?*/
+}
+.goods-list{
+
+}
+.goods-item{
+	width: 220px;
+	height: 320px;
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+}
+
+
+
+/*стили кнопок  .to-more-information*/
+.to-more-information{
+	background-color: #ee3643;
+}
+.to-more-information a{
+	font-size: 14px;
+	font-style: normal;
+	line-height: 18px;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+	display: block;
 }
