@@ -1,0 +1,35 @@
+body{
+	font-family: 'PT Sans', Arial, sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	color: #000;
+	font-style: normal;
+	font-weight: normal;
+	background-color: #fff;
+}
+h2{
+	font-family: 'Cuprum', Arial, sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+header{
+
+}
+.upper-header{
+	font-family: 'Cuprum', Arial, sans-serif;
+	background-color: #293449;
+	font-size: 17px;
+	line-height: 18px;
+	color: #fff;
+}
+.categories h3{
+	font-family: 'Cuprum', Arial, sans-serif;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: bold;
+}
+.categories. .slider{
+	background-image: url(img/slider-background.jpg);
+}
