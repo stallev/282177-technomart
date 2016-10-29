@@ -35,6 +35,11 @@ header{
   color: #fff;
   height: 42px;
 }
+.upper-header a{
+  font-size: 17px;
+  line-height: 18px;
+  color: #fff;
+}
 .container{
   width: 940px;
   margin: 0 auto;
@@ -46,9 +51,14 @@ header{
   display: block; 
 }
 .middle-header{
+  height: 215px;
+  margin-bottom: 120px;
+  background-color: #f1f5f7;
+}
+.middle-header .container{
   height: 160px;
 }
-.middle-header>div{
+.store-descripton, .store-contacts, .userblock{
   display: inline-block;
 }
 .store-descripton{
@@ -64,12 +74,11 @@ header{
   color: #e9292a;
                     /*V/A optical как перевести в css?*/
 }
-.navigation{
+nav.navigation{
   height: 55px;
   background-color: #32425c;
   border-bottom: 5px solid #293449;
   padding: 12px 52px;
-  margin-bottom: 120px;
 }
 .navigation li{
   display: inline-block;
@@ -104,27 +113,35 @@ header{
 .categories .slider{
   background-image: url(img/slider-background.jpg);
 }
-.goods{/* начнем с 850 и закончим 1280, товар заканчивается на 1268*/
+.goods{                   /* начнем с 850 и закончим 1280, товар заканчивается на 1268*/
   margin-top: 62px;
   height: 430px;
   padding-bottom: 12px;
 }
+
 .goods-header{
   height: 80px;
 }
+.goods-header .to-more-information{
+  width: 253px;
+  display: inline-block;
+}
+.goods-header>h2{
+  display: inline-block;
+}
 .goods-header .h2{
-  width: 320px; 
+  width: 270px; 
   padding:25px 20px;
   font-size: 30px;
   line-height: 30px;
   font-style: normal;
   text-transform: uppercase;
-  float: left;                /*лучший ли это вариант?*/
+ 
 }
-.goods-header .to-more-information{
+/*.goods-header .to-more-information{
   width: 252px;
   height: 38px;
-  float: right;                 /*лучший ли это вариант?*/
+                   /*лучший ли это вариант?*/
 }
 .goods-list{
 
@@ -138,7 +155,108 @@ header{
 }
 
 
+.manufacturers-header h2{
+  width: 450px;
+  float: left;
+ }
+ .manufacturers-header>div{
+  float: right;
+ }
+.manufacturers-header a{
+  display: block;
+  width: 300px;
+}
+.manufacturer{
+  display: inline-block;
+  width: 220px;
+  height: 143px;
+  vertical-align: top;
+}
+.services{
+  margin-bottom: 180px;
+}
+.services h2{
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.service-information-menu ul{
+  width: 240px;
+  float: left;
+}
+.service-information-menu li{
+  list-style: none;
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  padding: 25px 25px;
 
+}
+.service-information-menu a{
+  display: block;
+}
+
+.about-company{
+  width: 540px;
+  height: 370px;
+  float: left;
+}
+.delivery-contacts{
+  width: 300px;
+  height: 370px;
+  float: right;
+}
+
+.footer-upper{
+  background-color: #32425c;
+  height: 190px;
+}
+.footer-contacts{
+  width: 370px;
+  float: left;
+}
+.footer-upper p{
+  color: #f1f5f7;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+}
+.footer-upper li{
+  display: inline-block;
+}
+
+.footer-upper nav{
+  width: 560px;
+  float: right;
+}
+.menu-company a{
+  display: block;
+  color: #f1f5f7;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+
+}
+.menu-goods a{
+  display: block;
+  color: #ffd180;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+
+}
+.footer-bottom{
+  background-color: #293449;
+  height: 110px;
+}
+.copy,
+.social,
+.feedback,
+.develop{
+  float: left;
+}
 /*стили кнопок  .to-more-information*/
 .to-more-information{
   background-color: #ee3643;
@@ -152,4 +270,10 @@ header{
   text-decoration: none;
   text-align: center;
   display: block;
+}
+
+/*стили, которые надо будет удалить*/
+
+div, section{
+  border: 1px solid red;
 }
