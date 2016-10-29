@@ -274,6 +274,6 @@ nav.navigation{
 
 /*стили, которые надо будет удалить*/
 
-div, section{
-  border: 1px solid red;
+div, article, section, a { 
+outline: 1px solid red; 
 }
