@@ -33,7 +33,51 @@ header{
   font-size: 17px;
   line-height: 18px;
   color: #fff;
+  min-height: 42px;
+  margin-bottom: 5px;                                               /*Искусственно обошел выдающуюся нижнюю рамку логотипа*/
+}                                                                  /*укажи, пожалуйста, как решить эту проблему*/
+.upper-header a{ 
+  font-size: 17px;
+  line-height: 18px;
+  color: #fff;
+}
+.logo-header{
+  width: 220px;
   height: 42px;
+  border-bottom: 5px solid #b52933;
+  float: left;
+
+}
+.logo-header a{                                                       /*как выровнять текст по вертикали?*/
+  display: block;
+  width: 220px;
+  height: 42px;
+  color: #fff;
+  background-color: #ee3643;
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  
+}
+.bookmarks,
+.cart,
+.checkout{
+  width: 150px;
+  
+}
+.bookmarks a,
+.cart a,
+.checkout a{
+  display: block;
+  width: 150px;
+  
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 5px;
 }
 .upper-header a{
   font-size: 17px;
@@ -51,12 +95,12 @@ header{
   display: block; 
 }
 .middle-header{
-  height: 215px;
-  margin-bottom: 120px;
+  min-height: 210px;
   background-color: #f1f5f7;
+  margin-bottom: 120px;
 }
-.middle-header .container{
-  height: 160px;
+.middle-header>div.container{
+  min-height: 160px;
 }
 .store-descripton, .store-contacts, .userblock{
   display: inline-block;
@@ -66,23 +110,48 @@ header{
   line-height: 23px;
   font-style: italic;
   color: #ee3643;
+  clear: both;
+  margin-left: 51px;
 }
 .store-contacts a{
   font-size: 21px;
   line-height: 18px;
   font-style: normal;
   color: #e9292a;
-                    /*V/A optical как перевести в css?*/
+  
+}
+.store-contacts{
+  margin-left: 78px;
+}
+.store-contacts p{
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+.userblock{
+  margin-left: 85px;
+}
+.userblock a{
+  font-size: 21px;
+  line-height: 18px;
+  color: #000;
+}
+a.last-link{
+  margin-left: 60px;
 }
 nav.navigation{
-  height: 55px;
+  min-height: 55px;
   background-color: #32425c;
   border-bottom: 5px solid #293449;
-  padding: 12px 52px;
+  
+}
+.navigation ul{
+  padding: 0;
+  margin: 0;
+
 }
 .navigation li{
   display: inline-block;
-
 }
 .navigation a{
   display: block;
@@ -90,18 +159,30 @@ nav.navigation{
   font-style: normal;
   font-size: 17px;
   line-height: 17px;
-}
+  padding: 19px 30px;
+  text-decoration: none;
+  }
 .categories{          /*заканчивается раздел на 788*/
-  height: 410px;
+  min-height: 410px;
+  margin-bottom: 78px;
 }
 .categories .tile{
   width: 300px;
-  height: 123px;
+  min-height: 123px;
   float: left;
+}
+.materials,
+.equipment,
+.slider{
+  margin-right: 20px;
+}
+.techniks,
+.discount{
+  margin-bottom: 20px;
 }
 .categories .slider{
   width: 620px;
-  height: 265px;
+  min-height: 265px;
   float: left;
 }
 .categories h3{
@@ -111,79 +192,97 @@ nav.navigation{
   font-weight: bold;
 }
 .categories .slider{
-  background-image: url(img/slider-background.jpg);
+  background-image: url(/img/slider-background.jpg);
 }
-.goods{                   /* начнем с 850 и закончим 1280, товар заканчивается на 1268*/
-  margin-top: 62px;
-  height: 430px;
-  padding-bottom: 12px;
+.goods{                   /* начнем с 866 и закончим 1266*/
+  min-height: 400px;
+  padding: 0;
+  margin-bottom: 45px;
 }
 
 .goods-header{
-  height: 80px;
+  min-height: 80px;
 }
-.goods-header .to-more-information{
+.goods-header .to-more-information,
+a.all-manufacturers{
   width: 253px;
-  display: inline-block;
+  float: right;
+  
 }
 .goods-header>h2{
-  display: inline-block;
+  padding-bottom: 0px;
+  float: left;
 }
-.goods-header .h2{
-  width: 270px; 
-  padding:25px 20px;
-  font-size: 30px;
-  line-height: 30px;
-  font-style: normal;
-  text-transform: uppercase;
- 
-}
-/*.goods-header .to-more-information{
-  width: 252px;
-  height: 38px;
-                   /*лучший ли это вариант?*/
+
 }
 .goods-list{
 
 }
 .goods-item{
   width: 220px;
-  height: 320px;
+  min-height: 320px;
   display: inline-block;
   vertical-align: top;
   float: left;
+  margin-right: 20px;
+}
+article.last-item{
+  margin-right: 0;
 }
 
-
+.popular-manufacturers{       /*начинается на 1315px*/
+  min-height: 395px;
+  margin-bottom: 150px;
+  padding: 0;
+}
 .manufacturers-header h2{
-  width: 450px;
   float: left;
- }
- .manufacturers-header>div{
-  float: right;
- }
-.manufacturers-header a{
-  display: block;
-  width: 300px;
 }
+
 .manufacturer{
   display: inline-block;
-  width: 220px;
-  height: 143px;
+  width: 217px;                 /*ширина должна быть 220px, но тогда не помещается в 2 ряда*/
+  min-height: 143px;
   vertical-align: top;
+  margin-right: 20px;
 }
-.services{
-  margin-bottom: 180px;
+.manufacturer:nth-child(4n+1){
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.manufacturer:nth-child(n<5){                   /*Хотел добавить нижний маргин для первых четырех элементов, но почему-то не срабатывает*/
+margin-bottom: 20px;
+}
+.manufacturer{
+    text-align: center;
+}
+.manufacturer a{
+  display: block;
+  min-height: 143px;
+  }
+  .manufacturer a>img{                             /* не получается выровнять картинку по вертикали. Посмотри, пожалуйста*/
+    display: inline-block;
+
+  }
+.services{                /*начнем с 1860 px*/
+  min-height: 400px;
+  margin-bottom: 137px;
 }
 .services h2{
   font-size: 30px;
   line-height: 24px;
   font-weight: bold;
   text-transform: uppercase;
+
 }
-.service-information-menu ul{
+.services-introduction{                     /*закончится на 1960*/
+  min-height: 100px;
+  margin-bottom: 75px;
+}
+.service-information-menu ul{               /*начнется на 2035px*/
   width: 240px;
   float: left;
+  margin-right: 80px;
 }
 .service-information-menu li{
   list-style: none;
@@ -198,33 +297,70 @@ nav.navigation{
   display: block;
 }
 
-.about-company{
-  width: 540px;
-  height: 370px;
+.delivery-service{
+  width: 300px;
   float: left;
+}
+
+.about-us{                                                /*начнется на 2397px,  закончится на 2765*/
+  min-height: 368px;
+  margin-bottom: 86px;
+}
+.about-company{                        
+  width: 540px;
+  float: left;
+}
+.about-company .to-more-information{
+  width: 220px;
 }
 .delivery-contacts{
   width: 300px;
-  height: 370px;
   float: right;
 }
 
 .footer-upper{
   background-color: #32425c;
-  height: 190px;
+  min-height: 190px;
 }
 .footer-contacts{
   width: 370px;
   float: left;
+}
+.footer-contacts{
+  font-size: 18px;
+  line-height: 24px;
+  color: #f1f5f7;
+}
+
+.logo-footer{
+  width: 220px;
+  
+  border-bottom: 5px solid #b52933;
+  float: left;
+}
+.logo-footer a{
+  display: block;
+  width: 220px;
+  padding: 16px 0;
+  color: #fff;
+  background-color: #ee3643;
+  font-size: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
 }
 .footer-upper p{
   color: #f1f5f7;
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
+  clear: both;
 }
 .footer-upper li{
   display: inline-block;
+  width: 100px;
 }
 
 .footer-upper nav{
@@ -239,6 +375,10 @@ nav.navigation{
   line-height: 24px;
 
 }
+.menu-goods{
+  border: 1px solid #32425c;
+  margin-left: : 100px;
+}
 .menu-goods a{
   display: block;
   color: #ffd180;
@@ -249,19 +389,51 @@ nav.navigation{
 }
 .footer-bottom{
   background-color: #293449;
-  height: 110px;
+  min-height: 110px;
 }
 .copy,
 .social,
 .feedback,
 .develop{
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
+}
+.copy{
+  width: 240px;
+  margin-right: 150px;
+  color: #fff;
+}
+.social{
+  width: 150px;
+  margin-right: 100px;
+}
+.feedback{
+  width: 150px;
+  margin-right: 39px;
+}
+.develop{
+  width: 100px;
+}
+.feedback,
+.develop{
+  font-size: 16px;
+  line-height: 18px;
+  color: #fff;
+  text-align: left;
+}
+.feedback a,
+.develop a{
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffd180;
 }
 /*стили кнопок  .to-more-information*/
 .to-more-information{
   background-color: #ee3643;
 }
-.to-more-information a{
+a.to-more-information{
+  padding-bottom: 10px;
+  padding-top: 10px;
   font-size: 14px;
   font-style: normal;
   line-height: 18px;
@@ -270,6 +442,7 @@ nav.navigation{
   text-decoration: none;
   text-align: center;
   display: block;
+  border-radius: 3px;
 }
 
 /*стили, которые надо будет удалить*/
