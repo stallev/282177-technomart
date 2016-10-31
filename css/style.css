@@ -204,6 +204,21 @@ nav.navigation{
   min-height: 265px;
   float: left;
 }
+.materials{
+  background-color: #f6b22d;
+}
+.equipment{
+  background-color: #4aafde;
+}
+.techniks{
+  background-color: #cc79d1;
+}
+.discount{
+  background-color: #85d179;
+}
+.delivery{
+  background-color: #f6b22d;
+}
 .categories h3{
   font-family: 'Cuprum', Arial, sans-serif;
   font-size: 24px;
