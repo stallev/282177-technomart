@@ -34,9 +34,9 @@ header{
   line-height: 18px;
   color: #fff;
   min-height: 42px;
-  margin-bottom: 5px;                                               /*Искусственно обошел выдающуюся нижнюю рамку логотипа*/
+                                              /*Искусственно обошел выдающуюся нижнюю рамку логотипа*/
 }                                                                  /*укажи, пожалуйста, как решить эту проблему*/
-.upper-header a{ 
+.upper-header a{
   font-size: 17px;
   line-height: 18px;
   color: #fff;
@@ -44,7 +44,7 @@ header{
 .logo-header{
   width: 220px;
   height: 42px;
-  border-bottom: 5px solid #b52933;
+  
   float: left;
 
 }
@@ -55,11 +55,25 @@ header{
   color: #fff;
   background-color: #ee3643;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 42px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  
+  vertical-align: middle;
+}
+.logo-header:after{
+  content:"";
+  width: 220px;
+  height: 5px;
+  background-color: #b52933;
+  /*border-bottom: 5px solid #b52933;*/
+  position: relative;
+  font-size: 0px;
+  top: 1px;
+  left: 0px;
+  display: block;
+  z-index: 10;
+
 }
 .bookmarks,
 .cart,
@@ -79,11 +93,7 @@ header{
   text-decoration: none;
   padding: 12px 5px;
 }
-.upper-header a{
-  font-size: 17px;
-  line-height: 18px;
-  color: #fff;
-}
+
 .container{
   width: 940px;
   margin: 0 auto;
@@ -95,7 +105,7 @@ header{
   display: block; 
 }
 .middle-header{
-  min-height: 210px;
+  min-height: 215px;
   background-color: #f1f5f7;
   margin-bottom: 120px;
 }
@@ -225,8 +235,8 @@ nav.navigation{
   line-height: 30px;
   font-weight: bold;
 }
-.categories .slider{
-  background-image: url(/img/slider-background.jpg);
+.slider{
+  background: url(/img/slider-background.jpg);
 }
 .goods{                   /* начнем с 866 и закончим 1266*/
   min-height: 400px;
@@ -248,7 +258,6 @@ a.all-manufacturers{
   float: left;
 }
 
-}
 .goods-list{
 
 }
@@ -268,6 +277,7 @@ article.last-item{
   min-height: 395px;
   margin-bottom: 150px;
   padding: 0;
+  font-size: 0px;
 }
 .manufacturers-header h2{
   float: left;
@@ -275,17 +285,18 @@ article.last-item{
 
 .manufacturer{
   display: inline-block;
-  width: 217px;                 /*ширина должна быть 220px, но тогда не помещается в 2 ряда*/
+  width: 220px;                 /*ширина должна быть 220px, но тогда не помещается в 2 ряда*/
   min-height: 143px;
   vertical-align: top;
   margin-right: 20px;
+  margin-bottom: 20px;
+  
 }
-.manufacturer:nth-child(4n+1){
+.manufacturer:nth-child(4n){
   margin-right: 0px;
-  margin-left: 0px;
 }
-.manufacturer:nth-child(n<5){                   /*Хотел добавить нижний маргин для первых четырех элементов, но почему-то не срабатывает*/
-margin-bottom: 20px;
+.manufacturer:nth-child(n+4){
+  margin-bottom: 0px;
 }
 .manufacturer{
     text-align: center;
@@ -293,10 +304,11 @@ margin-bottom: 20px;
 .manufacturer a{
   display: block;
   min-height: 143px;
+  line-height: 135px;
   }
   .manufacturer a>img{                             /* не получается выровнять картинку по вертикали. Посмотри, пожалуйста*/
     display: inline-block;
-
+    vertical-align: middle;
   }
 .services{                /*начнем с 1860 px*/
   min-height: 400px;
@@ -422,7 +434,7 @@ margin-bottom: 20px;
 }
 .menu-goods{
   border: 1px solid #32425c;
-  margin-left: : 100px;
+  margin-left: 50px;
 }
 .menu-goods a{
   display: block;
