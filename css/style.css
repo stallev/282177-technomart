@@ -190,7 +190,21 @@ nav.navigation{
   line-height: 17px;
   padding: 19px 30px;
   text-decoration: none;
+  padding-left: 10px;
   }
+.breadcrumbs a{
+  display: inline-block;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0px 0px;
+  background-color: #fff;
+  border: 0;
+}
 .categories{          /*заканчивается раздел на 788*/
   min-height: 410px;
   margin-bottom: 78px;
@@ -257,14 +271,77 @@ nav.navigation{
 .slider{
   background: url(/img/slider-background.jpg);
 }
+.goods-filtr{
+  width: 220px;
+  float: left;
+
+}
+.price-filtr{
+  min-height: 200px;
+  padding-top: 20px;
+  margin-right: 20px;
+}
+.goods-filtr h3{
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.goods-filtr ul{
+  margin: 0;
+  padding: 0;
+}
+.goods-filtr li{
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+}
+li>input{
+  margin-right: 10px;
+}
+.goods-filtr h5{
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+form>div{
+  border-bottom: 1px solid #e5e5e5;
+  
+}
+.submit{
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
 
 
 .goods{                   /* начнем с 866 и закончим 1266*/
   min-height: 400px;
   padding: 0;
   margin-bottom: 45px;
+  
 }
-
+.goods-category h2{
+  margin: 56px 0 56px 30px;
+  vertical-align: middle;
+  min-height: 30px;
+  border: 1px solid #fff;
+}
 .goods-header{
   min-height: 80px;
 }
@@ -278,7 +355,36 @@ a.all-manufacturers{
   padding-bottom: 0px;
   float: left;
 }
-
+.sorting-criterion{
+  
+}
+.sorting-criterion>h4,
+.sorting-criterion>button{
+  display: inline-block;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  background-color: #fff;
+  border: 0;
+}
+.sorting-criterion>h4{
+  width: 220px;
+  margin: 0px;
+  padding-left: 20px;
+}
+.price-sorting{
+  margin-right: 70px;
+}
+.type-sorting{
+  margin-right: 63px;
+}
+.functionality-sorting{
+  margin-right: 43px;
+}
 .goods-list{
 
 }
@@ -293,7 +399,10 @@ a.all-manufacturers{
 article.last-item{
   margin-right: 0;
 }
-
+.about-category,
+.paginator{
+  clear: both;
+}
 .popular-manufacturers{       /*начинается на 1315px*/
   min-height: 395px;
   margin-bottom: 150px;
