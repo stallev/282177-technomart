@@ -3,68 +3,76 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
 	<header>
 		<div class="upper-header">
-			<div class="container"><!--центровщик-->
-				<div class="logo-header">Техномарт</div>
+			<div class="container uppers"><!--центровщик-->
+				<div class="logo-header"><a href="#">Техномарт</a></div>
 				<div class="search">
 					<form action="https://echo.htmlacademy.ru" method="get">
 						<button name="search">
 							
 						</button>
 						<input type="search" name="search">
-					</form>
-					
+					</form>					
 				</div>
 				<div class="bookmarks">
 					<a href="#">Закладки:<span class="bookmarks-counter">0</span></a>					
 				</div>
 				<div class="cart">
-					<a class="active" href="#">Корзина<span class="cart-counter">0</span></a>									
+					<a href="#">Корзина<span class="cart-counter">0</span></a>									
 				</div>
 				<div class="checkout">
 					<a href="#">Оформить заказ</a>
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<section class="middle-header">
+		<section class="middle-header">
+			<div class="container">
 				<div class="store-descripton">
-					<p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
+					<p>Интернет-магазин <br>строительных материалов <br>и инструментов для ремонта</p>
 				</div>
 				<div class="store-contacts">
 					<div class="phone">
-						<img src="http://placehold.it/150x100" alt="">
-						<a href="tel:+78125550555"></a>
+						<span>tel:</span>
+						<a href="tel:+78125550555">+78125550555</a>
 					</div>
 					<p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 				</div>
 				<div class="userblock">
 					<div class="username">
-						<span></span>
-						<a href="#">Переход в ЛК</a>
+						<span>
+							Равшан Джамшутович
+						</span>
 					</div>
-					<a href="#">Войти</a>
-					<a href="#">Регистрация</a>
+					<div class="customers-information">
+						<a class="my-orders" href="#">Мои заказы</a>
+						<a class="personal-cabinet" href="#">Личный кабинет</a>
+					</div>
+					
 				</div>
-			</section>
-			<nav class="navigation">
-				<ul>
-					<li><a href="#">Главная</a></li>
-					<li><a href="#">Компания</a></li>
-					<li><a href="#">Каталог</a></li>
-					<li><a href="#">Новости</a></li>
-					<li><a href="#">Спецпредложения</a></li>
-					<li><a href="#">Доставка</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</nav>
-
-		</div>
+			</div>
+			<div class="navigation">
+				<div class="container">
+					<nav class="navigation">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Компания</a></li>
+							<li><a href="#">Каталог</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Спецпредложения</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</section>
+		
 	</header>
 <main>
 	<div class="container">
@@ -90,17 +98,20 @@
 				</div>
 				<div class="manufacture-filtr">
 					<h5>Производители:</h5>
-
-					<input type="checkbox" name="Bosch" checked id="Bosch"><label for="Bosch">Bosch</label>
-					<input type="checkbox" name="interskol" id="interskol"><label for="interskol">Интерскол</label>
-					<input type="checkbox" name="Makita" checked id="Makita"><label for="Makita"></label>
-					<input type="checkbox" name="Dewalt" id="Dewalt"><label for="Dewalt"></label>Makita"
-					<input type="checkbox" name="Hitachi" id="Hitachi"><label for="Hitachi">Hitachi</label>
+					<ul>
+						<li><input type="checkbox" name="Bosch" checked id="Bosch"><label for="Bosch">Bosch</label></li>
+						<li><input type="checkbox" name="interskol" id="interskol"><label for="interskol">Интерскол</label></li>
+						<li><input type="checkbox" name="Makita" checked id="Makita"><label for="Makita"></label></li>
+						<li><input type="checkbox" name="Dewalt" id="Dewalt"><label for="Dewalt"></label></li>
+						<li><input type="checkbox" name="Hitachi" id="Hitachi"><label for="Hitachi">Hitachi</label></li>
+					</ul>
 				</div>
 				<div class="power-filtr">
 					<h5>Питание:</h5>
-					<input type="radio" name="power-kind" checked id="accumulator"><label for="accumulator">Аккумуляторные</label>
-					<input type="radio" name="power-kind" id="net"><label for="net">Сетевые</label>
+					<ul>
+						<li><input type="radio" name="power-kind" checked id="accumulator"><label for="accumulator">Аккумуляторные</label></li>
+						<li><input type="radio" name="power-kind" id="net"><label for="net">Сетевые</label></li>
+					</ul>
 
 				</div>
 				<input type="submit" value="Показать">

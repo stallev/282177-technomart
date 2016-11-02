@@ -114,6 +114,7 @@ header{
 }
 .store-descripton, .store-contacts, .userblock{
   display: inline-block;
+  margin-top: 57px;
 }
 .store-descripton{
   font-size: 16px;
@@ -122,6 +123,9 @@ header{
   color: #ee3643;
   clear: both;
   margin-left: 51px;
+}
+.store-descripton p{
+  margin: 0;
 }
 .store-contacts a{
   font-size: 21px;
@@ -139,12 +143,27 @@ header{
   color: #32425c;
 }
 .userblock{
-  margin-left: 85px;
+  margin-left: 72px;
+  width: 300px;
+  font-size: 0;
 }
 .userblock a{
   font-size: 21px;
   line-height: 18px;
   color: #000;
+}
+.username{
+  font-size: 21px;
+  line-height: 18px;
+  font-style: normal;
+  margin-bottom: 26px;
+}
+a.my-orders,                                                          /*Как добавить символ между ними?*/
+a.personal-cabinet{
+  display: inline-block;
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
 }
 a.last-link{
   margin-left: 60px;
@@ -238,6 +257,8 @@ nav.navigation{
 .slider{
   background: url(/img/slider-background.jpg);
 }
+
+
 .goods{                   /* начнем с 866 и закончим 1266*/
   min-height: 400px;
   padding: 0;
@@ -285,7 +306,7 @@ article.last-item{
 
 .manufacturer{
   display: inline-block;
-  width: 220px;                 /*ширина должна быть 220px, но тогда не помещается в 2 ряда*/
+  width: 220px;                 
   min-height: 143px;
   vertical-align: top;
   margin-right: 20px;
@@ -306,7 +327,7 @@ article.last-item{
   min-height: 143px;
   line-height: 135px;
   }
-  .manufacturer a>img{                             /* не получается выровнять картинку по вертикали. Посмотри, пожалуйста*/
+  .manufacturer a>img{                            
     display: inline-block;
     vertical-align: middle;
   }
@@ -449,7 +470,6 @@ article.last-item{
   min-height: 110px;
 }
 .copy,
-.social,
 .feedback,
 .develop{
   display: inline-block;
@@ -461,12 +481,26 @@ article.last-item{
   color: #fff;
 }
 .social{
+  display: inline-block;
   width: 150px;
   margin-right: 100px;
+  font-size: 0;
+}
+.social a{
+  display: inline-block;
+  width: 42px;
+  min-height: 42px;
+  margin-right: 4px;
+  text-align: center;
+  line-height: 45px;
+}
+.social a>img{                          /*Почему в Хроме не отображаются иконки?*/
+  vertical-align: middle;
+  display: inline-block;
 }
 .feedback{
   width: 150px;
-  margin-right: 39px;
+  margin-right: 0;
 }
 .develop{
   width: 100px;
