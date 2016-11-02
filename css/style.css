@@ -274,23 +274,14 @@ nav.navigation{
 .goods-filtr{
   width: 220px;
   float: left;
-
+  
 }
 .price-filtr{
   min-height: 200px;
   padding-top: 20px;
-  margin-right: 20px;
+  
 }
-.goods-filtr h3{
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 15px;
-}
+
 .goods-filtr ul{
   margin: 0;
   padding: 0;
@@ -334,7 +325,7 @@ form>div{
   min-height: 400px;
   padding: 0;
   margin-bottom: 45px;
-  
+  margin-left: 220px;
 }
 .goods-category h2{
   margin: 56px 0 56px 30px;
@@ -355,11 +346,12 @@ a.all-manufacturers{
   padding-bottom: 0px;
   float: left;
 }
-.sorting-criterion{
-  
+.filtering-and-sorting{
+  background-color: #f7f3ec;
 }
-.sorting-criterion>h4,
-.sorting-criterion>button{
+
+.filtering-and-sorting>h3,
+.sorting-criterion button{
   display: inline-block;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
@@ -371,19 +363,47 @@ a.all-manufacturers{
   background-color: #fff;
   border: 0;
 }
-.sorting-criterion>h4{
-  width: 220px;
+.filtering-and-sorting>h3{
+  width: 200px;
   margin: 0px;
   padding-left: 20px;
 }
 .price-sorting{
-  margin-right: 70px;
+  margin-right: 40px;
+  margin-left: 25px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  background-color: #fff;
+  border: 0;
 }
 .type-sorting{
   margin-right: 63px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  background-color: #fff;
+  border: 0;
 }
 .functionality-sorting{
   margin-right: 43px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 10px 0px;
+  background-color: #fff;
+  border: 0;
 }
 .goods-list{
 
@@ -396,12 +416,41 @@ a.all-manufacturers{
   float: left;
   margin-right: 20px;
 }
+.buy-item,
+.bookmark-item{
+  display: none;
+}
 article.last-item{
   margin-right: 0;
 }
 .about-category,
 .paginator{
   clear: both;
+}
+.paginator ul{
+  margin: 0;
+  padding: 0;
+}
+.paginator li{
+  display: inline-block;
+  
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+.paginator a{       /*доделать, не забыть*/
+  display: block;
+  padding: 11px 11px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: normal;
+  color: #000;
+  text-decoration: none;
+}
+.paginator:last-child{
+  text-transform: uppercase;
 }
 .popular-manufacturers{       /*начинается на 1315px*/
   min-height: 395px;
