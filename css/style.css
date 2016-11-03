@@ -608,7 +608,9 @@ out-category,
 
 .footer-upper{
   background-color: #32425c;
-  min-height: 190px;
+  min-height: 189px;
+  font-size: 0;
+  border-top: 1px solid transparent;
 }
 .footer-contacts{
   width: 370px;
@@ -648,6 +650,7 @@ out-category,
   vertical-align: middle;
 }
 .footer-upper p{
+  padding-top: 10px;
   color: #f1f5f7;
   text-decoration: none;
   font-size: 18px;
@@ -659,10 +662,14 @@ out-category,
   width: 100px;
   text-align: center;
 }
-
+.footer-upper li>a{
+  padding: 15px 11px;
+}
 .footer-upper nav{
   width: 560px;
   float: right;
+  margin-top: 30px;
+
 }
 .menu-company a{
   display: block;
@@ -675,7 +682,8 @@ out-category,
 }
 .menu-goods{
   border: 1px solid #32425c;
-  margin-left: 50px;
+  margin-left: 30px;
+
 }
 .menu-goods a{
   display: block;
@@ -688,6 +696,7 @@ out-category,
 .footer-bottom{
   background-color: #293449;
   min-height: 110px;
+  font-size: 0;
 }
 .copy,
 .feedback,
@@ -699,6 +708,11 @@ out-category,
   width: 240px;
   margin-right: 150px;
   color: #fff;
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
 }
 .social{
   display: inline-block;
