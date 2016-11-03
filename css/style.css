@@ -34,8 +34,7 @@ header{
   line-height: 18px;
   color: #fff;
   min-height: 42px;
-                                              /*Искусственно обошел выдающуюся нижнюю рамку логотипа*/
-}                                                                  /*укажи, пожалуйста, как решить эту проблему*/
+}                                           
 .upper-header a{
   font-size: 17px;
   line-height: 18px;
@@ -66,7 +65,7 @@ header{
   width: 220px;
   height: 5px;
   background-color: #b52933;
-  /*border-bottom: 5px solid #b52933;*/
+  
   position: relative;
   font-size: 0px;
   top: 1px;
@@ -107,7 +106,7 @@ header{
 .middle-header{
   min-height: 215px;
   background-color: #f1f5f7;
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 .middle-header>div.container{
   min-height: 160px;
@@ -158,12 +157,30 @@ header{
   font-style: normal;
   margin-bottom: 26px;
 }
+a.my-orders{
+  position: relative;
+}
 a.my-orders,                                                          /*Как добавить символ между ними?*/
 a.personal-cabinet{
   display: inline-block;
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
+}
+.my-orders{
+  margin-right: 30px;
+}
+.my-orders:after{
+  position: absolute;
+  content:"";
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #32425c;
+  top: 7px;
+  left: 88px;
+  display: block;
+  
 }
 a.last-link{
   margin-left: 60px;
@@ -176,8 +193,8 @@ nav.navigation{
 }
 .navigation ul{
   padding: 0;
-  margin: 0;
-
+  margin: 0 auto;
+  display: inline-block;        /*не получается выровнять главное меню по центру*/
 }
 .navigation li{
   display: inline-block;
@@ -190,7 +207,7 @@ nav.navigation{
   line-height: 17px;
   padding: 19px 30px;
   text-decoration: none;
-  padding-left: 10px;
+ 
   }
 .breadcrumbs a{
   display: inline-block;
@@ -269,7 +286,7 @@ nav.navigation{
   font-weight: bold;
 }
 .slider{
-  background: url(/img/slider-background.jpg);
+  background: url("/img/slider-background.jpg");              /*не ставится фоновая картика для верхнего слайдера*/
 }
 .goods-filtr{
   width: 220px;
@@ -322,6 +339,12 @@ form>div{
 
 
 .goods{                   /* начнем с 866 и закончим 1266*/
+  min-height: 400px;
+  padding: 0;
+  margin-bottom: 45px;
+  
+}
+.goods-catalog{
   min-height: 400px;
   padding: 0;
   margin-bottom: 45px;
@@ -408,24 +431,43 @@ a.all-manufacturers{
 .goods-list{
 
 }
-.goods-item{
+.goods .goods-item:last-child{
+  margin-right: 0;
+}
+.goods .goods-item{
   width: 220px;
-  min-height: 320px;
+  min-height: 317px;
   display: inline-block;
   vertical-align: top;
   float: left;
   margin-right: 20px;
 }
+.goods-catalog .goods-item{
+  width: 220px;
+  min-height: 317px;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.goods-catalog .goods-item:nth-child(n+7){
+  margin-bottom: 0px;
+}
+.goods-catalog .goods-list{
+  
+}
 .buy-item,
 .bookmark-item{
   display: none;
 }
-article.last-item{
-  margin-right: 0;
-}
-.about-category,
+out-category,
 .paginator{
   clear: both;
+}
+.paginator{
+  padding-top: 55px;
+  padding-left: 20px;
 }
 .paginator ul{
   margin: 0;
@@ -440,7 +482,7 @@ article.last-item{
 }
 .paginator a{       /*доделать, не забыть*/
   display: block;
-  padding: 11px 11px;
+  padding: 8px 11px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -451,6 +493,15 @@ article.last-item{
 }
 .paginator:last-child{
   text-transform: uppercase;
+}
+.about-category{
+  margin-bottom: 73px;
+}
+.about-category{
+  margin-bottom: 73px;
+}
+.about-category p{
+  margin: 0;
 }
 .popular-manufacturers{       /*начинается на 1315px*/
   min-height: 395px;
@@ -597,6 +648,7 @@ article.last-item{
 .footer-upper li{
   display: inline-block;
   width: 100px;
+  text-align: center;
 }
 
 .footer-upper nav{
@@ -609,6 +661,7 @@ article.last-item{
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
+  padding:7px 0;
 
 }
 .menu-goods{
@@ -621,7 +674,7 @@ article.last-item{
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
-
+  padding:7px 0;
 }
 .footer-bottom{
   background-color: #293449;
@@ -643,18 +696,27 @@ article.last-item{
   width: 150px;
   margin-right: 100px;
   font-size: 0;
+  vertical-align: middle;
 }
-.social a{
+a.social-btn{
   display: inline-block;
   width: 42px;
   min-height: 42px;
   margin-right: 4px;
   text-align: center;
-  line-height: 45px;
+  line-height: 20px;
+  font-size: 0;
+  background-color: #212a3a;
+  border-radius: 21px;
 }
-.social a>img{                          /*Почему в Хроме не отображаются иконки?*/
-  vertical-align: middle;
-  display: inline-block;
+a.vk{
+  background-image: url("img/.icon-vk.png");
+}
+a.facebook{
+  background-image: url("img/.icon-vk.png");
+}
+a.instagram{
+  background-image: url("img/.icon-vk.png");
 }
 .feedback{
   width: 150px;
