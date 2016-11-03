@@ -194,7 +194,8 @@ nav.navigation{
 .navigation ul{
   padding: 0;
   margin: 0 auto;
-  display: inline-block;        /*не получается выровнять главное меню по центру*/
+  display: inline-block;
+  padding-left: 30px;        /*не получается выровнять главное меню по центру*/
 }
 .navigation li{
   display: inline-block;
@@ -286,7 +287,7 @@ nav.navigation{
   font-weight: bold;
 }
 .slider{
-  background: url("/img/slider-background.jpg");              /*не ставится фоновая картика для верхнего слайдера*/
+  background: url("../img/slider-background.jpg");              /*не ставится фоновая картика для верхнего слайдера*/
 }
 .goods-filtr{
   width: 220px;
@@ -621,9 +622,17 @@ out-category,
 
 .logo-footer{
   width: 220px;
-  
-  border-bottom: 5px solid #b52933;
+  position: relative;
   float: left;
+}
+.logo-footer:after{
+  position: absolute;
+  content: "";
+  width: 221px;
+  height: 5px;
+  background-color: #b52933;
+  display: block;
+  
 }
 .logo-footer a{
   display: block;
@@ -698,7 +707,7 @@ out-category,
   font-size: 0;
   vertical-align: middle;
 }
-a.social-btn{                           /*не отображаются фоновые изображения в социальных кнопках*/
+a.social-btn{                           
   display: inline-block;
   width: 42px;
   min-height: 42px;
@@ -710,13 +719,13 @@ a.social-btn{                           /*не отображаются фоно
   border-radius: 21px;
 }
 a.vk{
-  background-image: url("img/.icon-vk.png");
+  background-image: url("../img/.icon-vk.png");
 }
 a.facebook{
-  background-image: url("img/.icon-vk.png");
+  background-image: url("../img/.icon-facebook.png");
 }
 a.instagram{
-  background-image: url("img/.icon-vk.png");
+  background-image: url("../img/.icon-instagram.png");
 }
 .feedback{
   width: 150px;
