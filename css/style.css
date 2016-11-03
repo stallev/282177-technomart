@@ -47,7 +47,7 @@ header{
   float: left;
 
 }
-.logo-header a{                                                       /*как выровнять текст по вертикали?*/
+.logo-header a{                                                      
   display: block;
   width: 220px;
   height: 42px;
@@ -160,7 +160,7 @@ header{
 a.my-orders{
   position: relative;
 }
-a.my-orders,                                                          /*Как добавить символ между ними?*/
+a.my-orders,                                                         
 a.personal-cabinet{
   display: inline-block;
   font-size: 16px;
@@ -698,7 +698,7 @@ out-category,
   font-size: 0;
   vertical-align: middle;
 }
-a.social-btn{
+a.social-btn{                           /*не отображаются фоновые изображения в социальных кнопках*/
   display: inline-block;
   width: 42px;
   min-height: 42px;
