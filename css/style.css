@@ -141,6 +141,15 @@ header{
   line-height: 24px;
   color: #32425c;
 }
+.phone span{
+  padding-left: 20px;
+  display: inline-block;
+  font-size: 0;
+  background: no-repeat url("../result.png") -0px -226px;
+  background-size: auto;
+  width: 19px;
+  height: 19px;
+}
 .userblock{
   margin-left: 72px;
   width: 300px;
@@ -428,6 +437,13 @@ a.all-manufacturers{
   padding: 10px 0px;
   background-color: #fff;
   border: 0;
+}
+.up-sorting{
+  background: url("../result.png") -0px -332px no-repeat;
+  background-size: auto;
+  width: 11px;
+  height: 10px;
+
 }
 .goods-list{
 
