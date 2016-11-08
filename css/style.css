@@ -34,6 +34,7 @@ header{
   line-height: 18px;
   color: #fff;
   min-height: 42px;
+  font-size: 0;
 }                                           
 .upper-header a{
   font-size: 17px;
@@ -60,6 +61,12 @@ header{
   text-align: center;
   vertical-align: middle;
 }
+.logo-header a:active{
+  background-color: #ba2732;
+}
+.logo-header a:hover{
+  background-color: #ca2c37;
+}
 .logo-header:after{
   content:"";
   width: 220px;
@@ -74,25 +81,123 @@ header{
   z-index: 10;
 
 }
+.form-search{
+  width: 270px;
+  display: inline-block;
+  font-size: 0;
+  background-color: #293449;
+}
+
+
+.search-form {
+  width: 100%;
+  position: relative;
+  border: none;
+}
+
+.search-form input {
+   border: none;
+}
+.search-field {
+  width: 100%;
+  background-color: #293449;
+  color: #fff;
+  font-size: 17px;
+  text-transform: capitalize;
+  padding: 12px 15px 12px 50px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.search-submit{
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  background-color: inherit;
+  background-image: url("../img/sprite.png");
+  opacity: 0.3;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  background-position: -10px -595px;
+  border:none;
+}
+.search-field:focus {
+  background-color: #fff;
+  color: #000;
+}
+
+
 .bookmarks,
 .cart,
 .checkout{
   width: 150px;
-  
+  display: inline-block;
+  font-size: 0;
 }
 .bookmarks a,
 .cart a,
 .checkout a{
   display: block;
   width: 150px;
-  
   font-size: 17px;
   line-height: 18px;
   text-align: center;
   text-decoration: none;
-  padding: 12px 5px;
+  padding: 12px 0px;
+}
+.bookmarks a:hover,
+.cart a:hover{
+  background-color: #212a3a;
+}
+.bookmarks a:hover::before,
+.cart a:hover::before{
+  opacity: 1;
+}
+.bookmarks a:active::before,
+.cart a:active::before{
+  opacity: 0.5;
+}
+.bookmarks a:active,
+.cart a:active{
+  background-color: #161d29;
+}
+.checkout a{
+  background-color: #63a63e;
+}
+.checkout a:hover{
+  background-color: #5fbb2d;
+
+}
+.checkout a:active{
+  background-color: #518534;
 }
 
+.sprite1{
+    position: relative;
+}
+.sprite1::before {  
+    content: "";
+    position: absolute; 
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+        
+}
+.sprite--icon-basket::before {
+    top:11px;
+    left: 17px;
+    width: 17px;
+    height: 16px;
+    background-position: -10px -10px;
+    opacity: 0.3;
+}
+.sprite--icon-bookmark::before {
+    top:11px;
+    left: 17px;
+    width: 14px;
+    height: 16px;
+    background-position: -10px -46px;
+    opacity: 0.3;
+}
 .container{
   width: 940px;
   margin: 0 auto;
@@ -126,6 +231,22 @@ header{
 .store-descripton p{
   margin: 0;
 }
+.phone-img{
+  position: relative;
+  padding-left: 0px;
+}
+.phone-img::before{
+  content: "";
+  position: absolute;
+  transform:translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 5%;
+  width: 19px;
+  height: 19px;
+  background-position: -10px -524px;
+}
 .store-contacts a{
   font-size: 21px;
   line-height: 18px;
@@ -150,10 +271,19 @@ header{
   width: 19px;
   height: 19px;
 }
+.phone a{
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
 .userblock{
   margin-left: 72px;
   width: 300px;
   font-size: 0;
+  position: relative;
+}
+.userblock:active{                  /*правилильно ли я задал непрозрачность? у меня при клике на любой элемент блока весь блок приобретает opacity: 0.3 */
+  opacity: 0.3;
 }
 .userblock a{
   font-size: 21px;
@@ -165,6 +295,62 @@ header{
   line-height: 18px;
   font-style: normal;
   margin-bottom: 26px;
+}
+.userlink{
+  position: relative;
+  padding-left: 25px;
+}
+a.userlink{
+  text-decoration: none;
+}
+a.userlink:hover{
+  color: #ee3643;
+}
+a.userlink:active{
+  color: #ee3643;
+}
+.login:before{
+  position: absolute;
+  content: "";
+  top: 20%;
+  left: -20px;
+  translate:transform(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 17px;
+  background-position: -10px -487px;
+
+}
+.userlink::before{
+  position: absolute;
+  content: "";
+  top: 10%;
+  left: 0%;
+  translate:transform(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 18px;
+  background-position: -10px -662px;
+}
+.userlink:hover::before{
+  background-position: -10px -1637px;
+}
+.userlink::after{
+  position: absolute;
+  content: "";
+  top: 20%;
+  left: 260px;
+  translate:transform(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 17px;
+  background-position: -10px -1563px;
+}
+.userlink:hover::after{
+  background-position: -10px -1526px;
 }
 a.my-orders{
   position: relative;
@@ -191,7 +377,7 @@ a.personal-cabinet{
   display: block;
   
 }
-a.last-link{
+a.registration{
   margin-left: 60px;
 }
 nav.navigation{
@@ -204,7 +390,8 @@ nav.navigation{
   padding: 0;
   margin: 0 auto;
   display: inline-block;
-  padding-left: 30px;        /*не получается выровнять главное меню по центру*/
+  padding-left: 30px;        
+  font-size: 0;
 }
 .navigation li{
   display: inline-block;
@@ -216,11 +403,21 @@ nav.navigation{
   font-size: 17px;
   line-height: 17px;
   padding: 19px 30px;
-  text-decoration: none;
- 
+  text-decoration: none; 
   }
-.breadcrumbs a{
+.navigation a:hover{
+  background-color: #293449;
+}
+.navigation a:active{
+  background-color: #1d2739;
+}
+.breadcrumbs li{  
   display: inline-block;
+  margin-right: 100px;
+}
+
+.breadcrumbs a{
+  position: relative;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -231,6 +428,20 @@ nav.navigation{
   padding: 0px 0px;
   background-color: #fff;
   border: 0;
+  color: #000;
+  margin-right: 39px;
+}
+.breadcrumbs a:nth-child(n+2)::before{
+  position: absolute;
+  content: "";
+  transform:translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: 50%;
+  right: 120%;
+  width: 8px;
+  height: 12px;
+  background-position: -10px -563px;
 }
 .categories{          /*заканчивается раздел на 788*/
   min-height: 410px;
@@ -251,15 +462,48 @@ nav.navigation{
   margin-left: 22px;
 }
 .link-to-category{
-  display: block;
+  display: inline-block;
   padding: 10px 24px;
   font-size: 14px;
   line-height: 18px;
-  /*color: #fff;*/
   text-transform: uppercase;
   text-decoration: none;
-  width: 135px;       /*потом надо убрать*/
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  opacity: 0.1;
 }
+.link-to-category:hover{                                            /*не получается настроить этот блак по макету, т.е. как в макете*/
+  background-color: #ccc;
+  opacity: 0.2;
+}
+.link-to-category:active{
+  background-color: #b2b2b2;
+  opacity: 0.3;
+}
+a.link-to-category{
+  color: #fff;
+}
+
+/*.materials .link-to-category{
+  border-color: #dda028;
+  background-color: #dda028;
+}
+.equipment .link-to-category{
+  border-color: #429dc7;
+  background-color: #429dc7;
+}
+.techniks .link-to-category{
+  border-color: #b76dbc;
+  background-color: #b76dbc;
+}
+.discount .link-to-category{
+  border-color: #77bc6d;
+  background-color: #77bc6d;
+}
+.delivery .link-to-category{
+  border-color: #dda028;
+  background-color: #dda028;
+}*/
 .materials,
 .equipment,
 .slider{
@@ -277,17 +521,58 @@ nav.navigation{
 .materials{
   background-color: #f6b22d;
 }
+.materials::before{
+  position: absolute;
+  width: 44px;
+  height: 65px;
+  background-position: -10px -1093px;
+}
 .equipment{
   background-color: #4aafde;
+}
+.equipment::before{
+  position: absolute;
+  width: 75px;
+  height: 61px;
+  background-position: -10px -824px;
 }
 .techniks{
   background-color: #cc79d1;
 }
+.techniks::before{
+  position: absolute;
+  width: 78px;
+  height: 62px;
+  background-position: -10px -1307px;
+}
 .discount{
   background-color: #85d179;
 }
+.discount::before{
+  position: absolute;
+  width: 59px;
+  height: 72px;
+  background-position: -10px -732px;
+}
 .delivery{
   background-color: #f6b22d;
+}
+.delivery::before{                                  /*добавить в спрайт*/
+  position: absolute;
+  width: 78px;
+    height: 63px;
+    background-position: -10px -1675px;
+}
+.tile{
+  position: relative;
+}
+.tile::before{
+  position: absolute;
+  content: "";
+  translate:transform(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  top: 27%;
+  left: 66%;
 }
 .categories h3{
   font-family: 'Cuprum', Arial, sans-serif;
@@ -296,7 +581,7 @@ nav.navigation{
   font-weight: bold;
 }
 .slider{
-  background: url("../img/slider-background.jpg");              /*не ставится фоновая картика для верхнего слайдера*/
+  background: url("../img/slider-background.jpg");   
 }
 .goods-filtr{
   width: 220px;
@@ -313,7 +598,7 @@ nav.navigation{
   margin: 0;
   padding: 0;
 }
-.goods-filtr li{
+.goods-filtr li{                                                  /*как настроить, чтобы чекились изображением псевдоэлемента?*/
   text-decoration: none;
   text-transform: uppercase;
   list-style: none;
@@ -439,10 +724,7 @@ a.all-manufacturers{
   border: 0;
 }
 .up-sorting{
-  background: url("../result.png") -0px -332px no-repeat;
-  background-size: auto;
-  width: 11px;
-  height: 10px;
+  background: url("../result.png");
 }
 .goods-list{
 
@@ -450,19 +732,20 @@ a.all-manufacturers{
 .goods .goods-item:last-child{
   margin-right: 0;
 }
-.goods .goods-item{
-  width: 220px;
-  min-height: 317px;
+.goods-item{
+  position: relative;
+  width: 218px;
+  min-height: 315px;
   display: inline-block;
   vertical-align: top;
   float: left;
+  border:1px solid #e5e5e5;
+  text-align: center;
+}
+.goods .goods-item{
   margin-right: 20px;
 }
 .goods-catalog .goods-item{
-  width: 220px;
-  min-height: 317px;
-  display: inline-block;
-  vertical-align: top;
   float: left;
   margin-left: 20px;
   margin-bottom: 20px;
@@ -473,11 +756,90 @@ a.all-manufacturers{
 .goods-catalog .goods-list{
   
 }
-.buy-item,
-.bookmark-item{
-  display: none;
+.goods-item>img{
+  display: inline-block;
+  text-align: center;
+  border: 1px solid transparent;
+  margin-top: 0px;
 }
-out-category,
+.goods-item>h3{
+  display: inline-block;
+  width: 160px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  margin: 50px 30px 0 30px;
+
+}
+a.new-price{
+  display: inline-block;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: #fff;
+}
+a.old-price{
+  display: inline-block;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-decoration: line-through;
+  color: #999999;
+}
+.pop-price-window{
+  display: none;
+  position: absolute;
+  width: 220px;
+  min-height: 125px;
+  background-color: #fff;
+  padding-top: 45px;
+}
+.pop-price-window a{
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 7px 32px;
+  box-sizing: border-box;
+  width: 135px;
+  margin: 0 auto;
+  
+}
+.bookmark-item{
+  color: #32425c; 
+  border: 2px solid #63a63e;
+  border-radius: 2px;
+}
+.buy-item{
+  position: relative;
+  color: #fff;
+  background-color: #63a63e;
+  border-bottom: 2px #367315;
+  border-radius: 2px;
+  margin-bottom: 7px;                                 /*не работает margin-bottom, а также другие margin в этом блоке (goods-item) */
+  text-align: center;
+}
+.buy-item::before{
+  content: "";
+   position: absolute; 
+   background-image: url("../img/sprite.png");
+   background-repeat: no-repeat;
+   top:9px;
+   left: 12px;
+   width: 17px;
+   height: 16px;
+   background-position: -10px -10px;
+   opacity: 0.3;
+}
+.goods-item:hover .pop-price-window{
+display: block;
+}
+.out-category,
 .paginator{
   clear: both;
 }
@@ -531,12 +893,12 @@ out-category,
 
 .manufacturer{
   display: inline-block;
-  width: 220px;                 
+  width: 218px;                 
   min-height: 143px;
   vertical-align: top;
   margin-right: 20px;
   margin-bottom: 20px;
-  
+  border:1px solid #e5e5e5;
 }
 .manufacturer:nth-child(4n){
   margin-right: 0px;
@@ -736,8 +1098,9 @@ out-category,
   font-size: 0;
   vertical-align: middle;
 }
-a.social-btn{                           
+.social-btn{                           
   display: inline-block;
+  position: relative;
   width: 42px;
   min-height: 42px;
   margin-right: 4px;
@@ -747,14 +1110,29 @@ a.social-btn{
   background-color: #212a3a;
   border-radius: 21px;
 }
-a.vk{
-  background-image: url("../img/.icon-vk.png");
+.social-btn::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%);
 }
-a.facebook{
-  background-image: url("../img/.icon-facebook.png");
+.sprite--icon-vk::before {
+    width: 20px;
+    height: 12px;
+    background-position: -10px -700px;
 }
-a.instagram{
-  background-image: url("../img/.icon-instagram.png");
+.sprite--icon-facebook::before {
+    width: 10px;
+    height: 18px;
+    background-position: -10px -288px;
+}
+.sprite--icon-instagram::before {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -390px;
 }
 .feedback{
   width: 150px;
@@ -793,6 +1171,14 @@ a.to-more-information{
   display: block;
   border-radius: 3px;
 }
+
+/*то, что имеет отношение к спрайту*/
+.sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
 
 /*стили, которые надо будет удалить*/
 

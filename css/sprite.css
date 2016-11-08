@@ -1,0 +1,232 @@
+
+sprite1 sprite--icon-basket
+
+.sprite {
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite--icon-basket {
+    width: 17px;
+    height: 16px;
+    background-position: -10px -10px;
+}
+
+.sprite--icon-bookmark {
+    width: 14px;
+    height: 16px;
+    background-position: -10px -46px;
+}
+
+.sprite--icon-check-off {
+    width: 23px;
+    height: 23px;
+    background-position: -10px -82px;
+}
+
+.sprite--icon-check-on {
+    width: 27px;
+    height: 23px;
+    background-position: -10px -125px;
+}
+
+.sprite--icon-circle {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -168px;
+}
+
+.sprite--icon-circle-dot {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -213px;
+}
+
+.sprite--icon-down-dir {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -258px;
+}
+
+.sprite--icon-facebook {
+    width: 10px;
+    height: 18px;
+    background-position: -10px -288px;
+}
+
+.sprite--icon-home {
+    width: 15px;
+    height: 12px;
+    background-position: -10px -326px;
+}
+
+.sprite--icon-home-breadcumbs {
+    width: 15px;
+    height: 12px;
+    background-position: -10px -358px;
+}
+
+.sprite--icon-instagram {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -390px;
+}
+
+.sprite--icon-left {
+    width: 22px;
+    height: 40px;
+    background-position: -10px -427px;
+}
+
+.sprite--icon-login {
+    width: 20px;
+    height: 17px;
+    background-position: -10px -487px;
+}
+
+.sprite--icon-phone {
+    width: 19px;
+    height: 19px;
+    background-position: -10px -524px;
+}
+
+.sprite--icon-right {
+    width: 8px;
+    height: 12px;
+    background-position: -10px -563px;
+}
+
+.sprite--icon-search {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -595px;
+}
+
+.sprite--icon-up-dir {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -632px;
+}
+
+.sprite--icon-user {
+    width: 20px;
+    height: 18px;
+    background-position: -10px -662px;
+}
+
+.sprite--icon-vk {
+    width: 20px;
+    height: 12px;
+    background-position: -10px -700px;
+}
+
+.sprite-discounts {
+    width: 59px;
+    height: 72px;
+    background-position: -10px -732px;
+}
+
+.sprite-equipment {
+    width: 75px;
+    height: 61px;
+    background-position: -10px -824px;
+}
+
+.sprite-github {
+    width: 30px;
+    height: 30px;
+    background-position: -10px -905px;
+}
+
+.sprite-gmail {
+    width: 30px;
+    height: 30px;
+    background-position: -10px -955px;
+}
+
+.sprite-icon-facebook {
+    width: 10px;
+    height: 18px;
+    background-position: -10px -1005px;
+}
+
+.sprite-linkedin {
+    width: 30px;
+    height: 30px;
+    background-position: -10px -1043px;
+}
+
+.sprite-materials {
+    width: 44px;
+    height: 65px;
+    background-position: -10px -1093px;
+}
+
+.sprite-new-flag {
+    width: 60px;
+    height: 59px;
+    background-position: -10px -1178px;
+}
+
+.sprite-stackoverflow {
+    width: 30px;
+    height: 30px;
+    background-position: -10px -1257px;
+}
+
+.sprite-technics {
+    width: 78px;
+    height: 62px;
+    background-position: -10px -1307px;
+}
+
+.sprite-tumblr {
+    width: 30px;
+    height: 30px;
+    background-position: -10px -1389px;
+}
+
+.sprite-twitter {
+    width: 30px;
+    height: 30px;
+    background-position: -10px -1439px;
+}
+.sprite-z-icon-login {
+    width: 20px;
+    height: 17px;
+    background-position: -10px -1809px;
+}
+
+.sprite-z-icon-logout {
+    width: 21px;
+    height: 17px;
+    background-position: -10px -1846px;
+}
+
+.sprite-z1-icon-logout {
+    width: 21px;
+    height: 17px;
+    background-position: -10px -1883px;
+}
+
+.sprite-z2-icon-logout {
+    width: 21px;
+    height: 17px;
+    background-position: -10px -1920px;
+}
+
+.sprite-z2-icon-user {
+    width: 20px;
+    height: 18px;
+    background-position: -10px -1957px;
+}
+
+.sprite-zdelivery {
+    width: 78px;
+    height: 63px;
+    background-position: -10px -1995px;
+}
+
+
+

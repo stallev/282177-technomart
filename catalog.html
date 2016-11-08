@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Catalog</title>
 	<link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans&amp;subset=cyrillic" rel="stylesheet">
@@ -12,19 +12,17 @@
 		<div class="upper-header">
 			<div class="container uppers"><!--центровщик-->
 				<div class="logo-header"><a href="#">Техномарт</a></div>
-				<div class="search">
-					<form action="https://echo.htmlacademy.ru" method="get">
-						<button name="search">
-							
-						</button>
-						<input type="search" name="search">
+				<div class="form-search">			
+					<form action="https://echo.htmlacademy.ru" method="get" class="search-form">
+						<input type="search" name="search" placeholder="поиск" class="search-field">
+						<input type="submit" name="submit" value="" class="search-submit" />
 					</form>					
 				</div>
 				<div class="bookmarks">
-					<a href="#">Закладки:<span class="bookmarks-counter">0</span></a>					
+					<a class="sprite1 sprite--icon-bookmark" href="#">Закладки:<span class="bookmarks-counter">0</span></a>					
 				</div>
 				<div class="cart">
-					<a href="#">Корзина<span class="cart-counter">0</span></a>									
+					<a class="sprite1 sprite--icon-basket" href="#">Корзина<span class="cart-counter">0</span></a>									
 				</div>
 				<div class="checkout">
 					<a href="#">Оформить заказ</a>
@@ -38,17 +36,19 @@
 				</div>
 				<div class="store-contacts">
 					<div class="phone">
-						<span>tel:</span>
-						<a href="tel:+78125550555">+78125550555</a>
+						<!--<span>tel:</span>-->
+						<a class="phone-img" href="tel:+78125550555">+7 (812) 555-05-55</a>
 					</div>
 					<p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
 				</div>
 				<div class="userblock">
 					<div class="username">
-						<a href=""></a>
-						<span>
-							Равшан Джамшутович
-						</span>
+						<a class="userlink" href="">
+							
+								Равшан Джамшутович
+							
+						</a>
+						
 						<a href=""></a>
 					</div>
 					<div class="customers-information">
@@ -94,7 +94,7 @@
 					<button class="price-sorting">По цене</button>
 					<button class="type-sorting">По типу</button>
 					<button class="functionality-sorting">По функционалу</button>
-					<button class="up-sorting"></button>
+					<button class=".sprite sprite--icon-up-dir up-sorting"></button>
 					<button class="down-sorting"></button>
 				
 			</div>
@@ -274,10 +274,10 @@
 					&copy;2010–2016 Компания &laquo;Техномарт&raquo;<br>
 					Все права защищены
 				</div>
-				<div class="social"> 
-					<a class="social-btn vk" href="http://www.vk.com">vkontakte</a>
-					<a class="social-btn facebook" href="http://www.facebook.com">facebook</a>
-					<a class="social-btn instagram" href="http://www.instagram.com">instagram</a>
+				<div class="social"> 			
+						<a class="sprite--icon-vk social-btn" href="http://www.vk.com">vkontakte</a>
+						<a class="sprite--icon-facebook social-btn" href="http://www.facebook.com">facebook</a>
+						<a class="social-btn sprite--icon-instagram" href="http://www.instagram.com">instagram</a>
 				</div>
 				
 				<div class="feedback">
