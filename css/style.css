@@ -13,6 +13,10 @@ body{
   padding: 0;
   width: 1200px;
 }
+.container{
+  width: 940px;
+  margin: 0 auto;
+}
 h2{
   font-size: 30px;
   line-height: 30px;
@@ -198,10 +202,7 @@ header{
     background-position: -10px -46px;
     opacity: 0.3;
 }
-.container{
-  width: 940px;
-  margin: 0 auto;
-}
+
 .uppers>div{
   display: inline-block;
 }
@@ -212,6 +213,7 @@ header{
   min-height: 215px;
   background-color: #f1f5f7;
   padding-bottom: 120px;
+  font-size: 0;
 }
 .middle-header>div.container{
   min-height: 160px;
@@ -219,17 +221,19 @@ header{
 .store-descripton, .store-contacts, .userblock{
   display: inline-block;
   margin-top: 57px;
+  vertical-align: top;
 }
 .store-descripton{
+  width: 300px;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
   color: #ee3643;
-  clear: both;
-  margin-left: 51px;
 }
 .store-descripton p{
   margin: 0;
+ margin-left: 52px;
+
 }
 .phone-img{
   position: relative;
@@ -255,12 +259,18 @@ header{
   
 }
 .store-contacts{
-  margin-left: 78px;
+  width: 340px;
+  padding-left: 30px;
+  box-sizing: border-box;
 }
 .store-contacts p{
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
+}
+.phone{
+  width: 250px;
+  margin-bottom: 20px;
 }
 .phone span{
   padding-left: 20px;
@@ -276,13 +286,22 @@ header{
   display: block;
   text-align: center;
 }
+p.address{
+  margin: 0;
+}
 .userblock{
-  margin-left: 72px;
   width: 300px;
   font-size: 0;
   position: relative;
 }
-.userblock:active{                  /*правилильно ли я задал непрозрачность? у меня при клике на любой элемент блока весь блок приобретает opacity: 0.3 */
+
+a.my-orders:hover,
+a.personal-cabinet:hover{
+ color: #ee3643;
+}
+.userlink:active,
+.my-orders:active,
+.personal-cabinet:active{
   opacity: 0.3;
 }
 .userblock a{
@@ -298,7 +317,9 @@ header{
 }
 .userlink{
   position: relative;
-  padding-left: 25px;
+  padding-left: 48px;
+  display: inline-block;
+  vertical-align: top;
 }
 a.userlink{
   text-decoration: none;
@@ -306,9 +327,7 @@ a.userlink{
 a.userlink:hover{
   color: #ee3643;
 }
-a.userlink:active{
-  color: #ee3643;
-}
+
 .login:before{
   position: absolute;
   content: "";
@@ -341,7 +360,7 @@ a.userlink:active{
   position: absolute;
   content: "";
   top: 20%;
-  left: 260px;
+  left: 270px;
   translate:transform(-50%, -50%);
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -351,6 +370,11 @@ a.userlink:active{
 }
 .userlink:hover::after{
   background-position: -10px -1526px;
+}
+.customers-information{
+  margin-left: 18px;
+  display: inline-block;
+  vertical-align: top;
 }
 a.my-orders{
   position: relative;
@@ -363,7 +387,7 @@ a.personal-cabinet{
   color: #32425c;
 }
 .my-orders{
-  margin-right: 30px;
+  margin-right: 39px;
 }
 .my-orders:after{
   position: absolute;
@@ -373,7 +397,7 @@ a.personal-cabinet{
   border-radius: 2px;
   background-color: #32425c;
   top: 7px;
-  left: 88px;
+  left: 92px;
   display: block;
   
 }
@@ -431,6 +455,20 @@ nav.navigation{
   color: #000;
   margin-right: 39px;
 }
+.breadcrumbs a:nth-child(1){
+  font-size: 0;
+}
+.breadcrumbs a:nth-child(1)::before{
+  position: absolute;
+  content: "";
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: -11px;
+  right: -16px;
+  width: 15px;
+  height: 12px;
+   background-position: -10px -358px;
+}
 .breadcrumbs a:nth-child(n+2)::before{
   position: absolute;
   content: "";
@@ -469,15 +507,15 @@ nav.navigation{
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 3px;
-  background-color: #e5e5e5;
+  
   opacity: 0.1;
 }
 .link-to-category:hover{                                            /*не получается настроить этот блак по макету, т.е. как в макете*/
-  background-color: #ccc;
+                                                                    /* background-color убрал, настроить как на макете, не получилось*/
   opacity: 0.2;
 }
 .link-to-category:active{
-  background-color: #b2b2b2;
+  
   opacity: 0.3;
 }
 a.link-to-category{
@@ -598,7 +636,7 @@ a.link-to-category{
   margin: 0;
   padding: 0;
 }
-.goods-filtr li{                                                  /*как настроить, чтобы чекились изображением псевдоэлемента?*/
+.goods-filtr li{                                                  
   text-decoration: none;
   text-transform: uppercase;
   list-style: none;
@@ -620,6 +658,75 @@ form>div{
   border-bottom: 1px solid #e5e5e5;
   
 }
+.goods-filtr li{                                                  
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 5px 0;
+  padding-left: 38px;
+}
+
+  .label-checkbox{
+  padding-left: 40px;
+  cursor: pointer;
+ }
+ .checkbox-indicator{
+  position: relative;
+ }
+ .manufacture-checkbox{
+ display: none;
+ }
+  .manufacture-filtr input[type="checkbox"]+label>span.checkbox-indicator::before{      /*для спана в составе label, который идет за checkbox*/
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -35px;  
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 23px;
+  height: 23px;
+  background-position: -10px -82px;
+ }
+   .manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator::before{
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -35px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 23px;                                                 /*.sprite--icon-check-on*/
+  background-position: -10px -125px;  
+ }
+  .power-filtr input{
+ display: none;
+ }
+ .radio-indicator{
+  position: relative;
+ }
+  .power-filtr input[type="radio"]+label>span.radio-indicator::before{      /*для спана в составе label, который идет за checkbox*/
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -35px;  
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+  background-position: -10px -168px;
+ }
+
+  .power-filtr input[type="radio"]:checked+label>span.radio-indicator::before{
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: -35px;
+  background-image: url("../img/sprite.png");   
+  background-repeat: no-repeat;               
+  width: 25px;
+  height: 25px;                                          /*.sprite--icon-circle-dot*/
+  background-position: -10px -213px;  
+ }
 .submit{
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
@@ -756,11 +863,16 @@ a.all-manufacturers{
 .goods-catalog .goods-list{
   
 }
-.goods-item>img{
+.item-img-box{
+  display: block;
+  height: 182px;
+  width: inherit;
+  margin: 0 auto;
+}
+.item-img-box>img{
   display: inline-block;
   text-align: center;
-  border: 1px solid transparent;
-  margin-top: 0px;
+  max-width:100%;
 }
 .goods-item>h3{
   display: inline-block;
@@ -770,19 +882,53 @@ a.all-manufacturers{
   font-size: 18px;
   line-height: 20px;
   border: 1px solid transparent;
-  margin: 50px 30px 0 30px;
-
+  margin: 0 30px;
+  min-height: 40px;
 }
-a.new-price{
-  display: inline-block;
+.goods-item .flag{
+  position: absolute;
+  text-indent: -10000px;
+  top:-1px;
+  right:-1px;
+  width:60px;
+  height:60px;
+  z-index: 20;
+}
+.goods-item .flag-new{
+  background: url("../img/sprite.png") no-repeat;
+  background-position: -10px -1178px;
+}
+.new-price{
+  display: block;
+  position: relative;
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 10px 30px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
   color: #fff;
+  background-color: #ee3643;
+  border-radius: 3px;
 }
-a.old-price{
-  display: inline-block;
+.new-price:after{                                                   /*нижний угол вылазит, не смог исправить*/
+    content:"";
+    position:absolute;
+    top:0;
+    right:-20px;
+    width:0;
+    height:0;
+    border:20px solid white;
+    border-left-color:#ee3643;
+}
+.old-price{
+  display: block;
+  width: 140px;
+  margin: 0 auto;
+  margin-bottom: 10px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -794,9 +940,15 @@ a.old-price{
   display: none;
   position: absolute;
   width: 220px;
-  min-height: 125px;
+  min-height: 182px;
   background-color: #fff;
   padding-top: 45px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.goods-item:hover .pop-price-window{
+display: block;
+z-index: 10;
 }
 .pop-price-window a{
   display: block;
@@ -804,16 +956,26 @@ a.old-price{
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  padding: 7px 32px;
+  padding: 7px 25px;
   box-sizing: border-box;
   width: 135px;
   margin: 0 auto;
-  
+  text-align: center;
+  margin-bottom: 7px;
 }
 .bookmark-item{
   color: #32425c; 
   border: 2px solid #63a63e;
   border-radius: 2px;
+}
+a.bookmark-item:hover{
+  color: #32425c; 
+  border: 2px solid #32425c;
+}
+a.bookmark-item:active{
+  color: #32425c; 
+  border: 2px solid #32425c;
+  opacity: 0.3;
 }
 .buy-item{
   position: relative;
@@ -821,8 +983,19 @@ a.old-price{
   background-color: #63a63e;
   border-bottom: 2px #367315;
   border-radius: 2px;
-  margin-bottom: 7px;                                 /*не работает margin-bottom, а также другие margin в этом блоке (goods-item) */
+  margin-bottom: 7px;                                 
   text-align: center;
+  box-shadow: 0px 3px 0px 0px #367315;
+}
+a.buy-item:hover{
+  background-color: #5fbb2d;
+}
+a.buy-item:hover::before,
+a.buy-item:active::before{
+  opacity: 1;
+}
+a.buy-item:active{
+  background-color: #518534;
 }
 .buy-item::before{
   content: "";
@@ -836,9 +1009,7 @@ a.old-price{
    background-position: -10px -10px;
    opacity: 0.3;
 }
-.goods-item:hover .pop-price-window{
-display: block;
-}
+
 .out-category,
 .paginator{
   clear: both;
@@ -961,13 +1132,60 @@ display: block;
   font-weight: bold;
   background-color: #32425c;
 }
+                                                  /*Делаем слайдер**/
+.service-information{
+  position: relative;
+}
+.service-information input{
+  display: none;
+}
+ .controls{
+  width: 320px;
+  float: left;
+  padding-right: 80px;
+  box-sizing: border-box;
+ }
+ .controls label{
+  display: block;
+  width: 240px;
+  text-decoration: none;
+  padding:15px 22px;
+  color: #fff;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  background-color: #32425c;
+  border-bottom:1px solid #293449;
+  border-top: 1px solid #405069;
+  box-sizing: border-box;
+ }
+ .service-slider{
+  width: 620px;
+  float: left;
+  min-height: 180px;
+ }   
+.slides{
+  position: absolute; 
+  min-height: 186px; 
+  opacity: 0;
+  width: 620px;
+}
+.slide1 { background: green; }
+.slide2 { background: blue; }
+.slide3 { background: orange; }
 
+#slide1:checked ~ .service-slider>.slide1,
+#slide2:checked ~ .service-slider>.slide2,
+#slide3:checked ~ .service-slider>.slide3{
+  display: block;
+  opacity: 1;
+}
 .delivery-service{
   width: 300px;
   float: left;
 }
 
-.about-us{                                                /*начнется на 2397px,  закончится на 2765*/
+.about-us{                                   /*начнется на 2397px,  закончится на 2765*/
   min-height: 368px;
   margin-bottom: 86px;
 }
@@ -1026,6 +1244,12 @@ display: block;
   text-align: center;
   vertical-align: middle;
 }
+.logo-footer a:active{
+  background-color: #ba2732;
+}
+.logo-footer a:hover{
+  background-color: #ca2c37;
+}
 .footer-upper p{
   padding-top: 10px;
   color: #f1f5f7;
@@ -1056,6 +1280,12 @@ display: block;
   line-height: 24px;
   padding:7px 0;
 
+}
+nav.menu-company a:hover{
+  text-decoration: underline;
+}
+nav.menu-company a:active{
+  opacity: 0.5;
 }
 .menu-goods{
   border: 1px solid #32425c;
@@ -1110,6 +1340,10 @@ display: block;
   background-color: #212a3a;
   border-radius: 21px;
 }
+a.social-btn:hover,
+a.social-btn:active{
+  background-color: #ee3643;
+}
 .social-btn::before{
   content: "";
   position: absolute;
@@ -1153,6 +1387,10 @@ display: block;
   font-size: 16px;
   line-height: 18px;
   color: #ffd180;
+}
+.feedback a:active,
+.develop a:active{
+  color: #ee3643;
 }
 /*стили кнопок  .to-more-information*/
 .to-more-information{

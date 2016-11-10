@@ -225,3 +225,10 @@
     height: 63px;
     background-position: -10px -1675px;
 }
+.userlink:hover,
+.my-orders:hover,
+.personal-cabinet:hover
+
+
+.userlink:hover::before,
+.userlink:hover::after,

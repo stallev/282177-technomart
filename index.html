@@ -50,7 +50,7 @@
 				<div class="container">
 					<nav class="navigation">
 						<ul>
-							<li><a href="#">Главная</a></li>
+							<li><a href="index.html">Главная</a></li>
 							<li><a href="#">Компания</a></li>
 							<li><a href="catalog.html">Каталог</a></li>
 							<li><a href="#">Новости</a></li>
@@ -112,7 +112,9 @@
 							<a href="#" class="buy-item">Купить</a>
 							<a href="#" class="bookmark-item">В закладки</a>
 						</div>
-						<img src="img/bfg9000.jpg" alt="" width="" height="">						
+						<div class="item-img-box">
+							<img src="img/bfg9000.jpg" alt="" width="" height="">
+						</div>						
 						<h3>Перфоратор BOSCH BFG 9000</h3>
 						<span class="old-price">32250 Р</span> 
 						<span class="new-price">25500 Р</span>
@@ -122,7 +124,9 @@
 							<a href="#" class="buy-item">Купить</a>
 							<a href="#" class="bookmark-item">В закладки</a>
 						</div>
-						<img src="img/bfg3000.jpg" alt="" width="" height="">
+						<div class="item-img-box">
+							<img src="img/bfg3000.jpg" alt="" width="" height="">
+						</div>
 						<h3>Перфоратор BOSCH BFG 3000</h3>
 						<span class="old-price"></span>
 						<span class="new-price"></span>
@@ -132,7 +136,9 @@
 							<a href="#" class="buy-item">Купить</a>
 							<a href="#" class="bookmark-item">В закладки</a>
 						</div>
-						<img src="img/bfg6000.jpg" alt="" width="" height="">
+						<div class="item-img-box">
+							<img src="img/bfg6000.jpg" alt="" width="" height="">
+						</div>
 						<h3>Перфоратор BOSCH BFG 6000</h3>
 						<span class="old-price"></span>
 						<span class="new-price"></span>
@@ -142,7 +148,9 @@
 							<a href="#" class="buy-item">Купить</a>
 							<a href="#" class="bookmark-item">В закладки</a>
 						</div>
-						<img src="img/bfg2000.jpg" alt="" width="" height="">
+						<div class="item-img-box">
+							<img src="img/bfg2000.jpg" alt="" width="" height="">
+						</div>
 						<h3>Перфоратор BOSCH BFG 2000</h3>
 						<span class="old-price"></span>
 						<span class="new-price"></span>
@@ -173,21 +181,20 @@
 					<p class="services-description">Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 				</div>
 				<!-- слайдер будет настроен позже -->
-				<div class="service-information">
-					<div class="service-information-menu"> <!--slider-->
-						<ul>
-							<li><a href="#">Доставка</a></li>
-							<li><a href="#">Гарантия</a></li>
-							<li><a href="#">Кредит</a></li>
-						</ul>
-					</div>
-					<div class="delivery-service">
-						<h2>Доставка</h2>
-						<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш на этаж!</p>
-					</div>
-					<div class="delivery-image">
-						<img src="http://placehold.it/150x100" alt="" width="" height="">
-					</div>
+				<div class="service-information">					
+						<input type="radio" name="point" id="slide1" checked>
+						<input type="radio" name="point" id="slide2">
+						<input type="radio" name="point" id="slide3">
+						<div class="controls">
+							<label for="slide1">Доставка</label>
+							<label for="slide2">Гарантия</label>
+							<label for="slide3">Кредит</label>
+						</div>
+						<div class="service-slider">
+							<div class="slides slide1"></div>
+							<div class="slides slide2"></div>
+							<div class="slides slide3"></div>
+						</div>					
 				</div>
 			</div>
 
