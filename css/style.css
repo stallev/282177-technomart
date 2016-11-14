@@ -1440,6 +1440,7 @@ a.service-reguest{
   width: 300px;
   float: right;
 }
+button.we-stray,
 .we-stray button{
   width: 100%;
   padding-bottom: 10px;
@@ -1671,6 +1672,79 @@ a.to-more-information{
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     display: block;
+}
+
+.stray-form{
+  position: relative;
+  width: 620px;
+  height: 430px;
+  box-sizing: border-box;
+  padding: 48px 80px 37px 80px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #000;
+  border-top: 7px solid #ee3643;
+}
+.window-close-button{
+  position: absolute;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  left: 610px;
+  top:7px;
+  background-color: transparent;
+  border: 0;
+}
+.window-close-button::after,
+.window-close-button::before{
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 4px;
+  background-color: #ee3643;
+  border-radius: 1px;
+  right: 1px;
+}
+.window-close-button::after{
+  transform:rotate(45deg);
+}
+.window-close-button::before{
+  transform:rotate(-45deg);
+}
+.persons-name,
+.persons-email{
+  width: 220px;
+  float: left;
+  margin-bottom: 21px;
+}
+.persons-message{
+  clear: both;
+  margin-bottom: 74px;
+}
+.persons-name{
+  margin-right: 20px;
+}
+.persons-name input,
+.persons-email input,
+.persons-message textarea{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #999;
+  border: 2px solid #999;
+  border-radius: 2px;
+}
+.persons-message textarea{
+  height: 114px;
+}
+.form-straying-submit:hover{
+  background-color: #b22832;
+}
+.stray-form input{
+  
 }
 
 
