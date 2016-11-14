@@ -122,14 +122,17 @@ header{
   background-repeat: no-repeat;
   width: 17px;
   height: 17px;
-  background-position: -10px -595px;
+  background-position: -248px -129px;
   border:none;
 }
 .search-field:focus {
   background-color: #fff;
   color: #000;
 }
-
+.search-field:focus::before{                            /*не видна в фокусе*/
+  background-position: -10px -166px;
+  z-index: 20;
+}
 
 .bookmarks,
 .cart,
@@ -199,7 +202,7 @@ header{
     left: 17px;
     width: 14px;
     height: 16px;
-    background-position: -10px -46px;
+    background-position: -47px -10px;
     opacity: 0.3;
 }
 
@@ -249,7 +252,7 @@ header{
   left: 5%;
   width: 19px;
   height: 19px;
-  background-position: -10px -524px;
+  background-position: -132px -129px;
 }
 .store-contacts a{
   font-size: 21px;
@@ -324,22 +327,22 @@ a.personal-cabinet:hover{
 a.userlink{
   text-decoration: none;
 }
-a.userlink:hover{
-  color: #ee3643;
+.login{
+  margin-left: 60px;
 }
-
-.login:before{
+.login::before{
   position: absolute;
   content: "";
-  top: 20%;
-  left: -20px;
-  translate:transform(-50%, -50%);
+  top: 5px;
+  left: 20px;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   width: 20px;
   height: 17px;
-  background-position: -10px -487px;
-
+  background-position: -248px -92px;
+}
+.login:hover::before{
+  background-position: -10px -129px;
 }
 .userlink::before{
   position: absolute;
@@ -351,10 +354,10 @@ a.userlink:hover{
   background-repeat: no-repeat;
   width: 20px;
   height: 18px;
-  background-position: -10px -662px;
+  background-position: -171px -166px;
 }
-.userlink:hover::before{
-  background-position: -10px -1637px;
+.userlink:hover::before{                  /*не получается добится изменения только левой иконки при наведении на нее*/
+  background-position: -211px -166px;
 }
 .userlink::after{
   position: absolute;
@@ -366,10 +369,10 @@ a.userlink:hover{
   background-repeat: no-repeat;
   width: 20px;
   height: 17px;
-  background-position: -10px -1563px;
+  background-position: -50px -129px;
 }
 .userlink:hover::after{
-  background-position: -10px -1526px;
+  background-position: -91px -129px;
 }
 .customers-information{
   margin-left: 18px;
@@ -457,17 +460,20 @@ nav.navigation{
 }
 .breadcrumbs a:nth-child(1){
   font-size: 0;
+  display: inline-block;
+  width: 0px;
+  height: 0px;
 }
 .breadcrumbs a:nth-child(1)::before{
   position: absolute;
   content: "";
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  top: -11px;
+  top: -3px;
   right: -16px;
   width: 15px;
   height: 12px;
-   background-position: -10px -358px;
+   background-position: -241px -55px;
 }
 .breadcrumbs a:nth-child(n+2)::before{
   position: absolute;
@@ -479,7 +485,7 @@ nav.navigation{
   right: 120%;
   width: 8px;
   height: 12px;
-  background-position: -10px -563px;
+  background-position: -145px -92px;
 }
 .categories{          /*заканчивается раздел на 788*/
   min-height: 410px;
@@ -563,16 +569,17 @@ a.link-to-category{
   position: absolute;
   width: 44px;
   height: 65px;
-  background-position: -10px -1093px;
+  background-position: -343px -91px;
 }
 .equipment{
   background-color: #4aafde;
 }
+
 .equipment::before{
   position: absolute;
   width: 75px;
   height: 61px;
-  background-position: -10px -824px;
+  background-position: -313px -10px;
 }
 .techniks{
   background-color: #cc79d1;
@@ -581,7 +588,7 @@ a.link-to-category{
   position: absolute;
   width: 78px;
   height: 62px;
-  background-position: -10px -1307px;
+  background-position: -10px -255px;
 }
 .discount{
   background-color: #85d179;
@@ -590,16 +597,16 @@ a.link-to-category{
   position: absolute;
   width: 59px;
   height: 72px;
-  background-position: -10px -732px;
+  background-position: -229px -204px;
 }
 .delivery{
   background-color: #f6b22d;
 }
-.delivery::before{                                  /*добавить в спрайт*/
+.delivery::before{                                 
   position: absolute;
   width: 78px;
     height: 63px;
-    background-position: -10px -1675px;
+    background-position: -131px -204px;
 }
 .tile{
   position: relative;
@@ -620,6 +627,47 @@ a.link-to-category{
 }
 .slider{
   background: url("../img/slider-background.jpg");   
+}
+.slider h3{
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 9px;
+  color: #fff;
+  font-size: 36px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.slider p{
+  margin: 0;
+  color: #fff;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: bold;
+}
+.slider a{
+  width:195px;
+  margin-top: 100px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  border-radius: 3px;
+  background-color: #ee3643; 
+}
+.slider a:hover{
+  background-color: #ca2c37;
+}
+.slider a:active{
+  background-color: #ca2c37;
 }
 .goods-filtr{
   width: 220px;
@@ -685,9 +733,13 @@ form>div{
   background-repeat: no-repeat;
   width: 23px;
   height: 23px;
-  background-position: -10px -82px;
+  background-position: -81px -10px;
+  opacity: 0.9;                             /*В покое немного прозрачнее, чем при наведении*/
  }
-   .manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator::before{
+ .manufacture-filtr input[type="checkbox"]+label>span.checkbox-indicator:hover::before{
+  background-position: -124px -10px;
+ }
+  .manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator::before{
   position: absolute;
   content: "";
   top: -3px;
@@ -696,7 +748,11 @@ form>div{
   background-repeat: no-repeat;
   width: 27px;
   height: 23px;                                                 /*.sprite--icon-check-on*/
-  background-position: -10px -125px;  
+  background-position: -167px -10px;  
+  opacity: 0.9;
+ }
+ .manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator:hover::before{
+  background-position: -214px -10px;
  }
   .power-filtr input{
  display: none;
@@ -713,9 +769,12 @@ form>div{
   background-repeat: no-repeat;
   width: 25px;
   height: 25px;
-  background-position: -10px -168px;
+  background-position: -261px -10px;
+  opacity: 0.9;
  }
-
+  .power-filtr input[type="radio"]+label>span.radio-indicator:hover::before{
+  background-position: -100px -55px;
+  }
   .power-filtr input[type="radio"]:checked+label>span.radio-indicator::before{
   position: absolute;
   content: "";
@@ -725,7 +784,23 @@ form>div{
   background-repeat: no-repeat;               
   width: 25px;
   height: 25px;                                          /*.sprite--icon-circle-dot*/
-  background-position: -10px -213px;  
+  background-position: -10px -55px;
+  opacity: 0.9; 
+ }
+ .power-filtr input[type="radio"]:checked+label>span.radio-indicator:hover::before{
+  background-position: -55px -55px;
+ }
+  .power-filtr input[type="radio"]:checked+label>span.radio-indicator:active::before{               
+  opacity: 0.3;
+ }
+   .power-filtr input[type="radio"]+label>span.radio-indicator:active::before{               
+  opacity: 0.3;
+ }
+ .manufacture-filtr input[type="checkbox"]+label>span.checkbox-indicator:active::before{
+  opacity: 0.3;
+ }
+.manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator:active::before{
+  opacity: 0.3;
  }
 .submit{
   font-family: 'PT Sans', Arial, sans-serif;
@@ -773,10 +848,12 @@ a.all-manufacturers{
 }
 .filtering-and-sorting{
   background-color: #f7f3ec;
+  box-sizing: border-box;
+  padding: 9px 0;
 }
 
 .filtering-and-sorting>h3,
-.sorting-criterion button{
+.filtering-and-sorting button{
   display: inline-block;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
@@ -784,55 +861,104 @@ a.all-manufacturers{
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
-  padding: 10px 0px;
-  background-color: #fff;
+  background-color: #f7f3ec;
   border: 0;
 }
+
 .filtering-and-sorting>h3{
-  width: 200px;
+  width: 240px;
   margin: 0px;
   padding-left: 20px;
+  box-sizing: border-box;
+}
+h3.sorting-header{
+  width: 230px;
 }
 .price-sorting{
-  margin-right: 40px;
-  margin-left: 25px;
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 10px 0px;
-  background-color: #fff;
-  border: 0;
+  margin-right: 58px;
 }
 .type-sorting{
-  margin-right: 63px;
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  font-style: normal;
-  font-weight: normal;
-  text-transform: uppercase;
-  padding: 10px 0px;
-  background-color: #fff;
-  border: 0;
+  margin-right: 48px;
 }
 .functionality-sorting{
-  margin-right: 43px;
+  margin-right: 35px;
+}
+.filtering-and-sorting span{
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
-  padding: 10px 0px;
-  background-color: #fff;
-  border: 0;
+  background-color: #f7f3ec;
+  border-bottom: 1px dotted #ee3643;
+  opacity: 0.3; 
+  cursor: pointer; 
 }
-.up-sorting{
-  background: url("../result.png");
+.active span{
+  color: #ee3643;
 }
+.price-sorting,
+.type-sorting,
+.functionality-sorting{
+}
+.filtering-and-sorting span:hover{
+  opacity: 1;
+  background-color: #f7f3ec; 
+  border-bottom: 1px solid #ee3643;
+}
+.filtering-and-sorting span:active{
+  opacity: 0.3
+}
+
+button.up-sorting,
+button.down-sorting{
+  position: relative;
+  width: 0;
+  height: 0;
+}
+.up-sorting::before{            
+  position: absolute;
+  content: "";
+  bottom: 3px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 0 solid #c6c2bd;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid #c6c2bd;
+}
+button.active{
+  border-bottom-color: #ee3643;
+  border-top-color: #ee3643;
+}
+.up-sorting:hover::before{
+  border-bottom: 12px solid #000;
+}
+.down-sorting:hover::before{
+  border-top: 12px solid #000;
+}
+.up-sorting:active::before{
+  border-bottom: 12px solid #ee3643;
+}
+.down-sorting:active::before{
+  border-bottom: 12px solid #ee3643;
+}
+.down-sorting::before{
+  position: absolute;
+  content: "";
+  bottom: 3px;
+  left: 17px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #c6c2bd;
+  border-bottom: 0 solid #c6c2bd;
+
+}
+
 .goods-list{
 
 }
@@ -896,7 +1022,7 @@ a.all-manufacturers{
 }
 .goods-item .flag-new{
   background: url("../img/sprite.png") no-repeat;
-  background-position: -10px -1178px;
+  background-position: -308px -176px;
 }
 .new-price{
   display: block;
@@ -1021,36 +1147,56 @@ a.buy-item:active{
 .paginator ul{
   margin: 0;
   padding: 0;
+  font-size: 0;
 }
 .paginator li{
   display: inline-block;
-  
-  text-align: center;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px;
+  margin-right: 10px;
+
 }
 .paginator a{       /*доделать, не забыть*/
-  display: block;
-  padding: 8px 11px;
+  display: inline-block;
+  min-width: 38px;
+  text-align: center;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 36px;
   font-style: normal;
   font-weight: normal;
   color: #000;
   text-decoration: none;
+  box-sizing: border-box;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
 }
-.paginator:last-child{
+.active{
+  background-color: #ee3643;
+}
+.paginator>ul>li:last-child>a{
   text-transform: uppercase;
+  padding: 0 30px;
+}
+.paginator a:hover{
+border-color: #bdc6ca;
+}
+.paginator a:active{
+border-color: #ee3643;
 }
 .about-category{
   margin-bottom: 73px;
 }
 .about-category{
   margin-bottom: 73px;
+}
+.about-category h2{
+  margin-left: 0;
+  margin-bottom: 39px;
 }
 .about-category p{
   margin: 0;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 .popular-manufacturers{       /*начинается на 1315px*/
   min-height: 395px;
@@ -1080,6 +1226,13 @@ a.buy-item:active{
 .manufacturer{
     text-align: center;
 }
+.manufacturer:hover{            /*как сделать тень в точном соответствии с макетом*/
+  box-shadow: 0px 10px 25px -13px rgba(41,52,73,1);
+}
+.manufacturer a:active{         /*как сделать прозрачность в точном соответствии с макетом*/
+  box-shadow: 0px 10px 25px -13px rgba(41,52,73,1);
+  opacity: 0.5;
+}
 .manufacturer a{
   display: block;
   min-height: 143px;
@@ -1105,13 +1258,8 @@ a.buy-item:active{
   margin-bottom: 75px;
 }
 .service-information-menu ul{               /*начнется на 2035px*/
-  width: 240px;
-  float: left;
-  margin-right: 80px;
-  margin-left: 0;
-  margin-top: 0;
-  padding-left: 0;
 }
+
 .service-information-menu li{
   
   list-style: none;
@@ -1135,16 +1283,28 @@ a.buy-item:active{
                                                   /*Делаем слайдер**/
 .service-information{
   position: relative;
+  min-height: 235px;
 }
 .service-information input{
   display: none;
 }
  .controls{
+  position: relative;
   width: 320px;
   float: left;
   padding-right: 80px;
   box-sizing: border-box;
  }
+ .controls::before{
+  position: absolute;
+  content: "";
+  top: 15px;
+  right: 0;
+  width: 10px;
+  height: 272px;
+  background-image: url("../img/tservice-slider-left-border.png");
+  background-repeat: no-repeat; 
+}
  .controls label{
   display: block;
   width: 240px;
@@ -1158,21 +1318,23 @@ a.buy-item:active{
   border-bottom:1px solid #293449;
   border-top: 1px solid #405069;
   box-sizing: border-box;
+  cursor: pointer;
+ }
+ .controls label:hover{
+  background-color: #293449;
  }
  .service-slider{
   width: 620px;
   float: left;
-  min-height: 180px;
+  min-height: 225px;
  }   
 .slides{
   position: absolute; 
-  min-height: 186px; 
+  min-height: 225px; 
   opacity: 0;
   width: 620px;
 }
-.slide1 { background: green; }
-.slide2 { background: blue; }
-.slide3 { background: orange; }
+
 
 #slide1:checked ~ .service-slider>.slide1,
 #slide2:checked ~ .service-slider>.slide2,
@@ -1180,6 +1342,84 @@ a.buy-item:active{
   display: block;
   opacity: 1;
 }
+#slide1:checked ~ .for-slide1{                   /*не работает изменение при выборе пункта слайдера*/
+  color: #32425c;
+  background-color: #fff;
+}
+#slide2:checked ~ .for-slide2{
+  color: #32425c;
+  background-color: #fff;
+}
+#slide3:checked ~ .for-slide3{
+  color: #32425c;
+  background-color: #fff;
+}
+.service-information input:checked{
+  
+}
+.service-description{  
+  position: absolute;
+  left: 2px;
+  top: 0px;
+  z-index: 3;
+  width: 300px;
+    
+}
+.service-description h2{
+  font-size: 36px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #32425c;
+  margin-bottom: 45px;
+  margin-top: 6px;
+}
+.service-description p{
+  margin: 0;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: #000;
+}
+a.service-reguest{
+  width: 195px;
+  margin-top: 29px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  border-radius: 3px;
+  background-color: #ee3643;
+}
+ .service-image{
+  position: absolute;
+  right: 2px;
+  top: 10px;
+  z-index: 2;
+  width: 320px;
+  min-height: inherit;
+}
+.slide1 .service-image{
+  width: 468px;
+  height: auto;
+  background: url("../img/delivery-symbol.jpg") no-repeat;
+}
+.slide2 .service-image{
+  width: 389px;
+  height: auto;
+  background: url("../img/guarantee-symbol.jpg") no-repeat;
+}
+.slide3 .service-image{
+  width: 465px;
+  height: auto;
+  background: url("../img/credit-symbol.jpg") no-repeat;
+}
+
 .delivery-service{
   width: 300px;
   float: left;
@@ -1200,7 +1440,23 @@ a.buy-item:active{
   width: 300px;
   float: right;
 }
-
+.we-stray button{
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #ee3643;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  border-radius: 3px;
+  border: 0px;
+  font-family: inherit;
+}
 .footer-upper{
   background-color: #32425c;
   min-height: 189px;
@@ -1356,17 +1612,17 @@ a.social-btn:active{
 .sprite--icon-vk::before {
     width: 20px;
     height: 12px;
-    background-position: -10px -700px;
+    background-position: -251px -166px;
 }
 .sprite--icon-facebook::before {
     width: 10px;
     height: 18px;
-    background-position: -10px -288px;
+    background-position: -176px -55px;
 }
 .sprite--icon-instagram::before {
     width: 17px;
     height: 17px;
-    background-position: -10px -390px;
+    background-position: -276px -55px;
 }
 .feedback{
   width: 150px;
