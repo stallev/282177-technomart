@@ -11,7 +11,7 @@ body{
   background-color: #fff;
   margin: 0 auto;
   padding: 0;
-  width: 1200px;
+  width: 100%;
 }
 .container{
   width: 940px;
@@ -129,6 +129,19 @@ header{
   background-color: #fff;
   color: #000;
 }
+ .search-field:focus+input.search-submit{
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  background-color: inherit;
+  background-image: url("../img/sprite.png");
+  opacity: 1;
+  background-repeat: no-repeat;
+  width: 17px;
+  height: 17px;
+  background-position: -10px -166px;
+  border:none;
+ }
 .search-field:focus::before{                            /*не видна в фокусе*/
   background-position: -10px -166px;
   z-index: 20;
@@ -311,6 +324,7 @@ a.personal-cabinet:hover{
   font-size: 21px;
   line-height: 18px;
   color: #000;
+  text-decoration: none;
 }
 .username{
   font-size: 21px;
@@ -333,7 +347,7 @@ a.userlink{
 .login::before{
   position: absolute;
   content: "";
-  top: 5px;
+  top: 1px;
   left: 20px;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
@@ -359,19 +373,24 @@ a.userlink{
 .userlink:hover::before{                  /*не получается добится изменения только левой иконки при наведении на нее*/
   background-position: -211px -166px;
 }
-.userlink::after{
+.logout::after{
   position: absolute;
   content: "";
-  top: 20%;
+  top: 2px;
   left: 270px;
-  translate:transform(-50%, -50%);
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   width: 20px;
   height: 17px;
   background-position: -50px -129px;
 }
-.userlink:hover::after{
+a.logout{
+  display: block;
+  float: right;
+  font-size: 0;
+
+}
+.logout:hover::after{
   background-position: -91px -129px;
 }
 .customers-information{
@@ -505,49 +524,26 @@ nav.navigation{
   display: block;
   margin-left: 22px;
 }
-.link-to-category{
+a.link-to-category{
   display: inline-block;
   padding: 10px 24px;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 3px;
-  
+  border-radius: 3px;  
+  color: #fff;
+  background-color: #000;
   opacity: 0.1;
 }
-.link-to-category:hover{                                            /*не получается настроить этот блак по макету, т.е. как в макете*/
-                                                                    /* background-color убрал, настроить как на макете, не получилось*/
+a.link-to-category:hover{                                            /*не получается настроить этот блак по макету, т.е. как в макете*/
+  background-color: #000;                                                                  /* background-color убрал, настроить как на макете, не получилось*/
   opacity: 0.2;
 }
-.link-to-category:active{
-  
+a.link-to-category:active{
+  background-color: #000;
   opacity: 0.3;
 }
-a.link-to-category{
-  color: #fff;
-}
-
-/*.materials .link-to-category{
-  border-color: #dda028;
-  background-color: #dda028;
-}
-.equipment .link-to-category{
-  border-color: #429dc7;
-  background-color: #429dc7;
-}
-.techniks .link-to-category{
-  border-color: #b76dbc;
-  background-color: #b76dbc;
-}
-.discount .link-to-category{
-  border-color: #77bc6d;
-  background-color: #77bc6d;
-}
-.delivery .link-to-category{
-  border-color: #dda028;
-  background-color: #dda028;
-}*/
 .materials,
 .equipment,
 .slider{
@@ -1047,7 +1043,7 @@ button.active{
     right:-20px;
     width:0;
     height:0;
-    border:20px solid white;
+    border:19px solid white;
     border-left-color:#ee3643;
 }
 .old-price{
@@ -1227,21 +1223,29 @@ border-color: #ee3643;
     text-align: center;
 }
 .manufacturer:hover{            /*как сделать тень в точном соответствии с макетом*/
-  box-shadow: 0px 10px 25px -13px rgba(41,52,73,1);
+
 }
 .manufacturer a:active{         /*как сделать прозрачность в точном соответствии с макетом*/
   box-shadow: 0px 10px 25px -13px rgba(41,52,73,1);
-  opacity: 0.5;
+  
 }
 .manufacturer a{
   display: block;
   min-height: 143px;
   line-height: 135px;
-  }
-  .manufacturer a>img{                            
-    display: inline-block;
-    vertical-align: middle;
-  }
+}
+.manufacturer a>img{                            
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.manufacturer a:hover{
+  box-shadow:  0px 10px 25px 0px rgba(41,52,73,0.5);
+}
+.manufacturer a:active{
+  box-shadow:  0px 4px 10px 0px #293449;
+  opacity: 0.3;
+}
 .services{                /*начнем с 1860 px*/
   min-height: 400px;
   margin-bottom: 137px;
@@ -1298,12 +1302,13 @@ border-color: #ee3643;
  .controls::before{
   position: absolute;
   content: "";
-  top: 15px;
-  right: 0;
+  top: -30px;
+  right: 80px;
   width: 10px;
   height: 272px;
   background-image: url("../img/tservice-slider-left-border.png");
   background-repeat: no-repeat; 
+  z-index: 15;
 }
  .controls label{
   display: block;
@@ -1342,15 +1347,15 @@ border-color: #ee3643;
   display: block;
   opacity: 1;
 }
-#slide1:checked ~ .for-slide1{                   /*не работает изменение при выборе пункта слайдера*/
+#slide1:checked ~ .controls>.for-slide1{                   /*не работает изменение при выборе пункта слайдера*/
   color: #32425c;
   background-color: #fff;
 }
-#slide2:checked ~ .for-slide2{
+#slide2:checked ~ .controls>.for-slide2{
   color: #32425c;
   background-color: #fff;
 }
-#slide3:checked ~ .for-slide3{
+#slide3:checked ~ .controls>.for-slide3{
   color: #32425c;
   background-color: #fff;
 }
@@ -1458,6 +1463,7 @@ button.we-stray,
   border: 0px;
   font-family: inherit;
 }
+
 .footer-upper{
   background-color: #32425c;
   min-height: 189px;
@@ -1666,7 +1672,12 @@ a.to-more-information{
   display: block;
   border-radius: 3px;
 }
-
+a.to-more-information:hover{
+  background-color: #ca2c37;
+}
+button.we-stray:hover{
+  background-color: #ca2c37;
+}
 /*то, что имеет отношение к спрайту*/
 .sprite {
     background-image: url("../img/sprite.png");
