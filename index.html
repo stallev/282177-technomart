@@ -237,7 +237,7 @@
 						<a href="#"><img src="img/small-map-image.jpg" alt="" width="" height=""></a>
 						<img class="popup-map" src="" alt="" width="" height="">
 						<div class="we-stray">
-							<button>Заблудились? Напишите нам</button><!--button   создать новый див для формы-->
+							<button class="we-stray-button">Заблудились? Напишите нам</button><!--button   создать новый див для формы-->
 						</div>
 					</div>
 				</div>
@@ -301,19 +301,50 @@
 				<button class="window-close-button" title="Close">Закрыть</button>
 				<div class="persons-name">
 					<label for="stray-form-name">Ваше имя:</label>
-					<input type="text" name="stray-form-name" id="stray-form-name" placeholder="Представьтесь, пожалуйста">
+					<input type="text" name="stray-form-name" id="stray-form-name" placeholder="Представьтесь, пожалуйста" required>
 				</div>
 				<div class="persons-email">
 					<label for="stray-form-email">Ваш e-mail:</label>
-					<input type="email" name="stray-form-email" id="stray-form-email" placeholder="Для отправки ответа">
+					<input type="email" name="stray-form-email" id="stray-form-email" placeholder="Для отправки ответа" required>
 				</div>
 				<div class="persons-message">
 					<label for="stray-form-message">Текст письма:</label>
 					<textarea name="stray-form-message" id="stray-form-message" placeholder="В свободной форме"></textarea>					
 				</div>
-				<button class="we-stray form-straying-submit" type="submit">Отправить</button>
+				<button class="form-straying-submit" type="submit">Отправить</button>
 			</form>
 		
 	</div>
   </body>
+  <script type="text/javascript">
+  	var link=document.querySelector(".we-stray-button");
+  	var straying=document.querySelector(".stray-form");
+  	var close=document.querySelector(".window-close-button");
+  	var name=document.querySelector("[name=stray-form-name]");
+  	var email=document.querySelector("[name=stray-form-email]");
+
+  	link.addEventListener("click", function(event){
+	  	event.preventDefault();
+	  	console.log("2");
+	  	straying.classList.add("stray-form-appear");
+	  	name.focus();
+  	});
+  	close.addEventListener("click", function(event){
+  		event.preventDefault();
+  		console.log("3");
+  		straying.classList.remove("stray-form-appear");
+  	});
+  	straying.addEventListener("submit", function(event){
+  		event.preventDefault();
+  		console.log("Отправляем форму");
+  		console.log("name.value");
+  		console.log("email.value");
+  		if(!name||!email){
+  			console.log("Необходимо представится и ввести email");
+  		}else{
+  			localStorage.setItem("person-name", name.value);
+  		}
+
+  	});
+  </script>
 </html>

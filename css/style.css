@@ -1445,8 +1445,8 @@ a.service-reguest{
   width: 300px;
   float: right;
 }
-button.we-stray,
-.we-stray button{
+button.form-straying-submit,
+.we-stray-button{
   width: 100%;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -1455,13 +1455,16 @@ button.we-stray,
   line-height: 18px;
   text-transform: uppercase;
   background-color: #ee3643;
-  color: #fff;
+  color: #fff; 
   text-decoration: none;
   text-align: center;
-  display: block;
-  border-radius: 3px;
-  border: 0px;
+  border: 0;
   font-family: inherit;
+  cursor: pointer;
+  display: block;
+}
+.we-stray button:hover{
+  background-color: #ca2c37;
 }
 
 .footer-upper{
@@ -1684,7 +1687,9 @@ button.we-stray:hover{
     background-repeat: no-repeat;
     display: block;
 }
-
+.modal-content{
+  position: relative;
+}
 .stray-form{
   position: relative;
   width: 620px;
@@ -1754,10 +1759,18 @@ button.we-stray:hover{
 .form-straying-submit:hover{
   background-color: #b22832;
 }
-.stray-form input{
-  
+.stray-form{
+  background-color: #fff;
+  display: none;
 }
-
+.stray-form-appear{
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -215px; 
+  margin-left: -310px; 
+}
 
 /*стили, которые надо будет удалить*/
 
