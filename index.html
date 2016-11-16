@@ -301,11 +301,11 @@
 				<button class="window-close-button" title="Close">Закрыть</button>
 				<div class="persons-name">
 					<label for="stray-form-name">Ваше имя:</label>
-					<input type="text" name="stray-form-name" id="stray-form-name" placeholder="Представьтесь, пожалуйста" required>
+					<input type="text" name="stray-form-name" id="stray-form-name" placeholder="Представьтесь, пожалуйста" >
 				</div>
 				<div class="persons-email">
 					<label for="stray-form-email">Ваш e-mail:</label>
-					<input type="email" name="stray-form-email" id="stray-form-email" placeholder="Для отправки ответа" required>
+					<input type="email" name="stray-form-email" id="stray-form-email" placeholder="Для отправки ответа">
 				</div>
 				<div class="persons-message">
 					<label for="stray-form-message">Текст письма:</label>
@@ -320,14 +320,33 @@
   	var link=document.querySelector(".we-stray-button");
   	var straying=document.querySelector(".stray-form");
   	var close=document.querySelector(".window-close-button");
-  	var name=document.querySelector("[name=stray-form-name]");
-  	var email=document.querySelector("[name=stray-form-email]");
+  	var usersname=straying.querySelector("[name=stray-form-name]");
+  	var email=straying.querySelector("[name=stray-form-email]");
+  	var usersname_storage=localStorage.getItem("person_name");
+  	var email_storage=localStorage.getItem("person_email");
+  	var usr_msg=straying.querySelector("[name=stray-form-message]")
 
   	link.addEventListener("click", function(event){
 	  	event.preventDefault();
 	  	console.log("2");
 	  	straying.classList.add("stray-form-appear");
-	  	name.focus();
+	  	usersname.focus();
+	  	if(usersname_storage){
+	  		console.log("usersname is in the localStorage");
+	  		usersname.value=usersname_storage;
+	  		email.focus();
+	  	}else{
+	  		usersname.focus();
+	  		console.log("No usersname in the localStorage");
+	  	}
+	  	if(email_storage){
+	  		console.log("email is in the localStorage");
+	  		email.value=email_storage;
+	  		usr_msg.focus();
+	  	}else{
+	  		console.log("No email in the localStorage");
+	  		email.focus();
+	  	}
   	});
   	close.addEventListener("click", function(event){
   		event.preventDefault();
@@ -337,14 +356,14 @@
   	straying.addEventListener("submit", function(event){
   		event.preventDefault();
   		console.log("Отправляем форму");
-  		console.log("name.value");
+  		console.log("usersname.value");
   		console.log("email.value");
-  		if(!name||!email){
-  			console.log("Необходимо представится и ввести email");
+  		if(!usersname.value||!email.value){
+  			console.log("Необходимо представиться и ввести email");
   		}else{
-  			localStorage.setItem("person-name", name.value);
+  			localStorage.setItem("person_name", usersname.value);
+  			localStorage.setItem("person_email", email.value);
   		}
-
   	});
   </script>
 </html>
