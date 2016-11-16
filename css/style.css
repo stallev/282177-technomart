@@ -829,8 +829,16 @@ form>div{
   min-height: 30px;
   border: 1px solid #fff;
 }
+.manufacturers-header,
 .goods-header{
+  box-sizing: border-box;
   min-height: 80px;
+  padding: 25px 0 25px 30px;
+  background-color: #f7f3ec;
+}
+.manufacturers-header h2,
+.goods-header h2{
+  margin: 0;
 }
 .goods-header .to-more-information,
 a.all-manufacturers{
@@ -1430,13 +1438,51 @@ a.service-reguest{
   float: left;
 }
 
-.about-us{                                   /*начнется на 2397px,  закончится на 2765*/
+.about-us>.container{                                   /*начнется на 2397px,  закончится на 2765*/
   min-height: 368px;
   margin-bottom: 86px;
 }
 .about-company{                        
   width: 540px;
   float: left;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+.about-company h2,
+.delivery-contacts h2{
+  margin: 0;
+  margin-bottom: 3px;
+}
+.delivery-contacts p,
+.about-company p{
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-style: normal;
+  margin-top: 25px;
+  margin-bottom: 6px;
+}
+.about-company ul{
+  padding: 0;
+  margin-top: 24px;
+  margin-bottom: 14px;
+}
+.about-company li{
+  position: relative;
+  padding-left: 35px;
+  list-style: none;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 26px;
+}
+.about-company li::before{
+  position: absolute;
+  content: "";
+  left: 1px;
+  top: 10px;
+  height: 2px;
+  width: 24px;
+  background-color: #fb565a;
 }
 .about-company .to-more-information{
   width: 220px;
@@ -1444,6 +1490,18 @@ a.service-reguest{
 .delivery-contacts{
   width: 300px;
   float: right;
+}
+a.small-map{
+  margin-top: 28px;
+  display: inline-block;
+  margin-bottom: 40px;
+  min-height: 158px;
+}
+a.small-map>img{
+  margin-bottom: -10px;
+}
+.popup-map{
+  display: none;
 }
 button.form-straying-submit,
 .we-stray-button{
@@ -1770,6 +1828,7 @@ button.we-stray:hover{
   left: 50%;
   margin-top: -215px; 
   margin-left: -310px; 
+  z-index: 30;
 }
 
 /*стили, которые надо будет удалить*/
