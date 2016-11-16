@@ -622,7 +622,9 @@ a.link-to-category:active{
   font-weight: bold;
 }
 .slider{
-  background: url("../img/slider-background.jpg");   
+  position: relative; 
+  width: 620px;
+  height: 265px;  
 }
 .slider h3{
   margin: 0;
@@ -644,8 +646,9 @@ a.link-to-category:active{
   font-weight: bold;
 }
 .slider a{
+  position: absolute;
+  top: 205px;
   width:195px;
-  margin-top: 100px;
   padding-bottom: 10px;
   padding-top: 10px;
   font-size: 14px;
@@ -664,6 +667,65 @@ a.link-to-category:active{
 }
 .slider a:active{
   background-color: #ca2c37;
+}
+.slider>input{
+ position: absolute;
+ top:280px;
+ left: 50px;
+ margin-right: 20px;
+ display: none;
+}
+
+.slider-controls{
+  position: absolute;
+  min-width: 45px;
+  min-height: 25px;
+  top: 270px;
+  left: 300px;
+  z-index: 2;
+
+}
+.slider-controls label{
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    border: 2px solid #000;
+    margin-left: 10px;
+   
+}
+
+.slider-controls label::before{
+
+}
+.slider h3{
+  
+}
+.category-slider>div{
+  position: absolute;
+  width: 620px;
+  height: 265px;
+  display: none;
+}
+.punchers-slide{
+  background: url("../img/punchers-slide.jpg");
+}
+.drills-slide{
+  background: url("../img/drills-slide.jpg");
+
+}
+#punchers:checked ~ .category-slider>.punchers-slide,
+#drils:checked ~ .category-slider>.drills-slide{
+  display: block;
+
+}
+.slider-controls>label::before{
+
+}
+#punchers:checked ~ .slider-controls>.punchers::before,
+#drills:checked ~ .slider-controls>.drills::before{
+  
 }
 .goods-filtr{
   width: 220px;
@@ -1341,7 +1403,7 @@ border-color: #ee3643;
   float: left;
   min-height: 225px;
  }   
-.slides{
+.service-slider>div{
   position: absolute; 
   min-height: 225px; 
   opacity: 0;
