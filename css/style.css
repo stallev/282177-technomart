@@ -515,7 +515,7 @@ nav.navigation{
 }
 .categories{          /*заканчивается раздел на 788*/
   min-height: 410px;
-  margin-bottom: 78px;
+  margin-bottom: 56px;
 }
 .categories .tile{
   width: 300px;
@@ -905,16 +905,20 @@ form>div{
   min-height: 30px;
   border: 1px solid #fff;
 }
-.manufacturers-header,
+
 .goods-header{
   box-sizing: border-box;
   min-height: 80px;
-  padding: 25px 0 25px 30px;
+  padding: 25px 0 25px 29px;
   background-color: #f7f3ec;
+  margin-bottom: 20px;
 }
 .manufacturers-header h2,
 .goods-header h2{
   margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
 }
 .goods-header .to-more-information,
 a.all-manufacturers{
@@ -925,6 +929,11 @@ a.all-manufacturers{
 .goods-header>h2{
   padding-bottom: 0px;
   float: left;
+}
+.goods-header>a,
+.manufacturers-header>a{
+  margin-right: 22px;
+  margin-top: -6px;
 }
 .filtering-and-sorting{
   background-color: #f7f3ec;
@@ -1070,15 +1079,22 @@ button.active{
   
 }
 .item-img-box{
+  position: relative;
   display: block;
   height: 182px;
   width: inherit;
   margin: 0 auto;
+
 }
 .item-img-box>img{
+  position: absolute;
   display: inline-block;
-  text-align: center;
+  margin: auto;
   max-width:100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .goods-item>h3{
   display: inline-block;
@@ -1111,7 +1127,7 @@ button.active{
   margin: 0 auto;
   margin-bottom: 20px;
   margin-top: 10px;
-  padding: 10px 30px;
+  padding: 10px 25px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
@@ -1124,7 +1140,7 @@ button.active{
     content:"";
     position:absolute;
     top:0;
-    right:-20px;
+    right:-30px;
     width:0;
     height:0;
     border:19px solid white;
@@ -1134,6 +1150,7 @@ button.active{
   display: block;
   width: 140px;
   margin: 0 auto;
+  margin-top: 6px;
   margin-bottom: 10px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
@@ -1152,10 +1169,10 @@ button.active{
   margin: 0 auto;
   box-sizing: border-box;
 }
-.goods-item:hover .pop-price-window{
+/*.goods-item:hover .pop-price-window{
 display: block;
 z-index: 10;
-}
+}*/
 .pop-price-window a{
   display: block;
   text-decoration: none;
@@ -1280,9 +1297,16 @@ border-color: #ee3643;
 }
 .popular-manufacturers{       /*начинается на 1315px*/
   min-height: 395px;
-  margin-bottom: 150px;
+  margin-bottom: 158px;
   padding: 0;
   font-size: 0px;
+}
+.manufacturers-header{
+  box-sizing: border-box;
+  min-height: 80px;
+  padding: 25px 0 25px 27px;
+  background-color: #f7f3ec;
+  margin-bottom: 20px;
 }
 .manufacturers-header h2{
   float: left;
@@ -1314,13 +1338,20 @@ border-color: #ee3643;
   
 }
 .manufacturer a{
+  position: relative;
   display: block;
   min-height: 143px;
   line-height: 135px;
+  margin-right: -9px;
 }
-.manufacturer a>img{                            
+.manufacturer a>img{ 
+  position: absolute;                           
   display: inline-block;
-  vertical-align: middle;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .manufacturer a:hover{
@@ -1337,13 +1368,20 @@ border-color: #ee3643;
 .services h2{
   font-size: 30px;
   line-height: 24px;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
-
+  margin: 0;
+  margin-bottom: 25px;
+}
+.services p{
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  padding-left: 4px;
 }
 .services-introduction{                     /*закончится на 1960*/
   min-height: 100px;
-  margin-bottom: 75px;
+  margin-bottom: 63px;
 }
 .service-information-menu ul{               /*начнется на 2035px*/
 }
