@@ -45,12 +45,20 @@ header{
   line-height: 18px;
   color: #fff;
 }
+div.uppers{
+  position: relative;
+}
+.uppers>div{
+  display: inline-block;
+}
+.uppers a{
+  display: block; 
+}
 .logo-header{
   width: 220px;
   height: 42px;
   
   float: left;
-
 }
 .logo-header a{                                                      
   display: block;
@@ -76,10 +84,9 @@ header{
   width: 220px;
   height: 5px;
   background-color: #b52933;
-  
   position: relative;
   font-size: 0px;
-  top: 1px;
+  top: 0;
   left: 0px;
   display: block;
   z-index: 10;
@@ -154,6 +161,7 @@ header{
   width: 150px;
   display: inline-block;
   font-size: 0;
+  height: inherit;
 }
 .bookmarks a,
 .cart a,
@@ -169,7 +177,8 @@ header{
 .bookmarks a,
 .cart a{
   padding-left: 8px;
-  padding-bottom: 3px;
+  box-sizing: border-box;
+  color: #fff;
 }
 .bookmarks a:hover,
 .cart a:hover{
@@ -225,12 +234,7 @@ header{
     opacity: 1;
 }
 
-.uppers>div{
-  display: inline-block;
-}
-.uppers a{
-  display: block; 
-}
+
 .middle-header{
   min-height: 215px;
   background-color: #f1f5f7;
@@ -493,7 +497,7 @@ nav.navigation{
   background-color: #fff;
   border: 0;
   color: #000;
-  margin-right: 50px;
+  margin-right: 42px;
 }
 .breadcrumbs a:nth-child(1){
   font-size: 0;
@@ -1021,7 +1025,7 @@ h3.sorting-header{
   opacity: 0.3; 
   cursor: pointer; 
 }
-.active span{
+.price-sorting span{
   color: #ee3643;
 }
 .price-sorting,
@@ -1050,10 +1054,10 @@ button.down-sorting{
   left: 0;
   width: 0;
   height: 0;
-  border-top: 0 solid #c6c2bd;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 12px solid #c6c2bd;
+  border-top: 0 solid #ee3643;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 9px solid #ee3643;
 }
 button.active{
   border-bottom-color: #ee3643;
@@ -1078,9 +1082,9 @@ button.active{
   left: 17px;
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 12px solid #c6c2bd;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 9px solid #c6c2bd;
   border-bottom: 0 solid #c6c2bd;
 
 }
@@ -1094,7 +1098,7 @@ button.active{
 .goods-item{
   position: relative;
   box-sizing: border-box;
-  width: 218px;
+  width: 220px;
   min-height: 315px;
   display: inline-block;
   vertical-align: top;
@@ -1107,8 +1111,8 @@ button.active{
 }
 .goods-catalog .goods-item{
   float: left;
-  margin-left: 22px;
-  margin-bottom: 22px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 .goods-catalog .goods-item:nth-child(n+7){
   margin-bottom: 0px;
@@ -1759,7 +1763,7 @@ button.form-straying-submit,
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
-  padding:15px 0;
+  padding:16px 0;
   padding-left: 49px;
 
 }
@@ -1780,7 +1784,7 @@ nav.menu-company a:active{
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
-  padding:15px 0;
+  padding:16px 0;
   padding-left: 42px;
   text-align: right;
 }
