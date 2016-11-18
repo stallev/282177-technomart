@@ -173,7 +173,7 @@
 					<a class="all-manufacturers to-more-information" href="">Все производители</a>						
 				</div>
 				<div class="manufacturers-list">
-					<div class="manufacturer"><a href="#"><img src="img/bosch.png" alt="" width="126" height="37"></a></div>
+					<div class="manufacturer"><a href="#"><img src="img/BOSCH.png" alt="" width="126" height="37"></a></div>
 					<div class="manufacturer"><a href="#"><img src="img/Makita.png" alt="" width="123" height="40"></a></div>
 					<div class="manufacturer"><a href="#"><img src="img/DeWALT.png" alt="" width="146" height="44"></a></div>
 					<div class="manufacturer"><a href="#"><img src="img/interscol.png" alt="" width="200" height="88"></a></div>
@@ -331,23 +331,29 @@
 				</div>
 				<button class="form-straying-submit" type="submit">Отправить</button>
 			</form>
-		
+		<div class="modal-map">
+			<button class="window-close-button" title="Close">Закрыть</button>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.6117457360938!2d30.32272355046434!3d59.93878217004831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1479466622264" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
 	</div>
   </body>
   <script type="text/javascript">
   	var link=document.querySelector(".we-stray-button");
   	var straying=document.querySelector(".stray-form");
-  	var close=document.querySelector(".window-close-button");
+  	var close=document.querySelector(".stray-form>.window-close-button");
   	var usersname=straying.querySelector("[name=stray-form-name]");
   	var email=straying.querySelector("[name=stray-form-email]");
   	var usersname_storage=localStorage.getItem("person_name");
   	var email_storage=localStorage.getItem("person_email");
-  	var usr_msg=straying.querySelector("[name=stray-form-message]")
+  	var usr_msg=straying.querySelector("[name=stray-form-message]");
+  	var location_link=document.querySelector(".small-map");
+  	var big_map=document.querySelector(".modal-map");
+  	var close_map=document.querySelector(".modal-map>.window-close-button");
 
   	link.addEventListener("click", function(event){
 	  	event.preventDefault();
 	  	console.log("2");
-	  	straying.classList.add("stray-form-appear");
+	  	straying.classList.add("appear");
 	  	usersname.focus();
 	  	if(usersname_storage){
 	  		console.log("usersname is in the localStorage");
@@ -369,7 +375,7 @@
   	close.addEventListener("click", function(event){
   		event.preventDefault();
   		console.log("3");
-  		straying.classList.remove("stray-form-appear");
+  		straying.classList.remove("appear");
   	});
   	straying.addEventListener("submit", function(event){
   		event.preventDefault();
@@ -383,5 +389,17 @@
   			localStorage.setItem("person_email", email.value);
   		}
   	});
+  	location_link.addEventListener("click", function(event){
+  		event.preventDefault();
+  		console.log("Кликнули по карте");
+  		big_map.classList.add("appear");
+  		console.log("5");
+  	});
+  	close_map.addEventListener("click", function(event){
+  		event.preventDefault();
+  		console.log("3");
+  		big_map.classList.remove("appear");
+  	});
+
   </script>
 </html>
