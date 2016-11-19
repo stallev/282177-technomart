@@ -101,11 +101,14 @@
 				<form class="goods-filtr-form" action="https://echo.htmlacademy.ru" method="get">
 					<div class="price-filtr">
 						<h5>Цена:</h5>
-						<div class="range">
-							<div></div>
-							<div></div>
-							<input type="text" class="upper-price">
-							<input type="text" class="bottom-price">
+						<div class="range-bounds">
+							<span class="down-bound"></span>
+							<span class="upper-bound"></span>
+						</div>
+						<div class="price-bounds">
+							<input type="number" class="down-price" value="0" min="0">
+							&#8212;
+							<input type="number" class="upper-price" max="1000000">
 						</div>					
 					</div>
 					<div class="manufacture-filtr">

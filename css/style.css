@@ -479,13 +479,10 @@ nav.navigation{
 .navigation a:active{
   background-color: #1d2739;
 }
-.breadcrumbs li{  
-  display: inline-block;
-  margin-right: 120px;
-}
 
 .breadcrumbs a{
-  position: relative;
+  position: relative;  
+  display: inline-block;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -497,13 +494,13 @@ nav.navigation{
   background-color: #fff;
   border: 0;
   color: #000;
-  margin-right: 42px;
+  margin-right: 37px;
 }
 .breadcrumbs a:nth-child(1){
   font-size: 0;
-  display: inline-block;
   width: 0px;
   height: 0px;
+  margin-right: 52px;
 }
 .breadcrumbs a:nth-child(1)::before{
   position: absolute;
@@ -516,13 +513,24 @@ nav.navigation{
   height: 12px;
    background-position: -241px -55px;
 }
-.breadcrumbs a:nth-child(n+2)::before{
+.breadcrumbs a:nth-child(2)::before{
   position: absolute;
   content: "";
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   top: 3px;
-  right: 120%;
+  left: -19px;
+  width: 8px;
+  height: 12px;
+  background-position: -145px -92px;
+}
+.breadcrumbs a:nth-child(n+3)::before{
+  position: absolute;
+  content: "";
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  top: 3px;
+  left: -28px;
   width: 8px;
   height: 12px;
   background-position: -145px -92px;
@@ -761,11 +769,103 @@ a.link-to-category:active{
   float: left;
   
 }
+.goods-filtr h5{
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 13px;
+  margin-bottom: 7px;
+}
 .price-filtr{
-  min-height: 175px;
+  height: 187px;
   box-sizing: border-box;
 }
-
+.price-filtr h5{
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: 0px;
+  line-height: 15px;
+  margin-left: 3px;
+}
+.range-bounds{
+  background-color: #f7f3ec;
+  height: 76px;
+  margin-bottom: 10px;
+  padding-top: 25px;
+  box-sizing: border-box;
+}
+.range-bounds span{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 4px;
+  height: 4px;
+  border: 8px solid #fff;
+  border-radius: 10px;
+  background-color: #ababab;
+  box-shadow: 0 2px 0 0 rgba(0, 1, 1, 0.14);
+}
+.range-bounds span:first-child{
+  margin-left: 20px;
+  margin-right: 120px;
+}
+.range-bounds span:first-child::before{
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: #00ca74;
+  z-index: 2;
+  top: 2px;
+  left: 13px;
+}
+.range-bounds span:last-child::before{
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background-color: #d7dcde;
+  z-index: 2;
+  top: 2px;
+  left: 13px;
+}
+.price-bounds{
+  background-color: #fff;
+  width: inherit;
+}
+.price-bounds input{
+  display: inline-block;
+  vertical-align: middle;
+  width: 92px;
+  height: 40px;
+  background-color: #f7f3ec;
+  border: 1px solid #000;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #000;
+  text-align: center;
+  box-sizing: border-box;
+}
+.upper-price{
+ margin-left: 10px;
+}
+.down-price{
+ margin-right: 10px;
+ position: relative;
+}
+input.down-price::before{
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #000;
+  top: 20px;
+  left: 55px;
+}
 .goods-filtr ul{
   margin: 0;
   padding: 0;
@@ -778,18 +878,12 @@ a.link-to-category:active{
 li>input{
   margin-right: 10px;
 }
-.goods-filtr h5{
-  font-family: 'PT Sans', Arial, sans-serif;
-  font-size: 17px;
-  line-height: 30px;
-  font-style: normal;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 13px;
-  margin-bottom: 7px;
-}
+
 .manufacture-filtr{
 	padding-bottom: 13px;
+}
+.manufacture-filtr h5{
+  margin-top: 15px;
 }
 form>div{
   border-bottom: 1px solid #e5e5e5;
@@ -1123,7 +1217,7 @@ button.active{
 .item-img-box{
   position: relative;
   display: block;
-  height: 176px;
+  height: 174px;
   width: inherit;
   margin: 0 auto;
 
@@ -1147,7 +1241,7 @@ button.active{
   line-height: 20px;
   border: 1px solid transparent;
   margin: 0 30px;
-  margin-bottom: 9px;
+  margin-bottom: 13px;
   min-height: 40px;
 }
 .goods-item .flag{
@@ -1169,7 +1263,7 @@ button.active{
   width: 80px;
   margin: 0 auto;
   margin-bottom: 15px;
-  margin-top: 0;
+  margin-top: 4px;
   padding: 10px 25px 10px 28px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
@@ -1194,7 +1288,7 @@ button.active{
   width: 140px;
   margin: 0 auto;
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   padding-left: 4px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
@@ -1491,6 +1585,12 @@ border-color: #ee3643;
   box-sizing: border-box;
   cursor: pointer;
  }
+ .controls label:first-child{
+  border-top: 0;
+ }
+ .controls label:last-child{
+  border-bottom: 0;
+ }
  .controls label:hover{
   background-color: #293449;
  }
@@ -1625,7 +1725,7 @@ a.service-reguest{
 .about-company ul{
   padding: 0;
   margin-top: 22px;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 .about-company li{
   position: relative;
@@ -1633,7 +1733,7 @@ a.service-reguest{
   list-style: none;
   font-size: 18px;
   line-height: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 .about-company li::before{
   position: absolute;
@@ -1689,10 +1789,9 @@ button.form-straying-submit,
   background-color: #32425c;
   min-height: 189px;
   font-size: 0;
-  border-top: 1px solid transparent;
 }
 .footer-contacts{
-  width: 370px;
+  width: 330px;
   float: left;
 }
 .footer-contacts{
@@ -1749,13 +1848,15 @@ button.form-straying-submit,
 }
 
 .footer-upper nav{
-  width: 560px;
+  width: 610px;
   float: right;
   margin-top: 20px;
 
 }
 .menu-company ul{
 	padding: 0;
+  display: block;
+  float: right;
 }
 .menu-company a{
   display: block;
@@ -1764,7 +1865,7 @@ button.form-straying-submit,
   font-size: 18px;
   line-height: 24px;
   padding:16px 0;
-  padding-left: 49px;
+  margin-left: 59px;
 
 }
 nav.menu-company a:hover{
@@ -1775,7 +1876,8 @@ nav.menu-company a:active{
 }
 .menu-goods{
   border: 1px solid #32425c;
-  margin-left: 30px;
+  display: block;
+  float: right;
 
 }
 .menu-goods a{
@@ -1785,8 +1887,11 @@ nav.menu-company a:active{
   font-size: 18px;
   line-height: 24px;
   padding:16px 0;
-  padding-left: 42px;
+  margin-left: 59px;
   text-align: right;
+}
+.menu-goods:nth-child{
+  margin-left: 0;
 }
 .footer-bottom{
   background-color: #293449;
@@ -2014,6 +2119,6 @@ button.we-stray:hover{
 
 /*стили, которые надо будет удалить*/
 
-/*div, article, section, a { 
+div, article, section, a { 
 outline: 1px solid red; 
-}*/
+}
