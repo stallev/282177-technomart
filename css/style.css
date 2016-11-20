@@ -13,6 +13,7 @@ body{
   padding: 0;
   width: 100%;
 }
+
 .container{
   width: 940px;
   margin: 0 auto;
@@ -222,7 +223,7 @@ div.uppers{
     left: 17px;
     width: 17px;
     height: 16px;
-    background-position: -10px -10px;
+    background-position: -0px -343px;
     opacity: 0.3;
 }
 .sprite--icon-bookmark::before {
@@ -230,8 +231,8 @@ div.uppers{
     left: 17px;
     width: 14px;
     height: 16px;
-    background-position: -47px -10px;
-    opacity: 1;
+    background-position: -17px -343px;
+    opacity: 0.3;
 }
 
 
@@ -241,10 +242,16 @@ div.uppers{
   font-size: 0;
 }
 .catalog-middle-header{
- padding-bottom: 76px;
+ padding-bottom: 40px;
+}
+.catalog-middle-header{
+  margin-bottom: 36px;
 }
 .index-middle-header{
-  padding-bottom: 120px;	
+  padding-bottom: 80px;	
+}
+.index-middle-header{
+  margin-bottom: 40px;
 }
 .middle-header>div.container{
   min-height: 158px;
@@ -313,7 +320,6 @@ div.uppers{
   padding-left: 20px;
   display: inline-block;
   font-size: 0;
-  background: no-repeat url("../result.png") -0px -226px;
   background-size: auto;
   width: 19px;
   height: 19px;
@@ -357,7 +363,8 @@ a.personal-cabinet:hover{
   font-size: 21px;
   line-height: 18px;
   font-style: normal;
-  margin-bottom: 20px;
+  min-height: 38px;
+  background-color: #fff;
 }
 .userlink{
   position: relative;
@@ -483,6 +490,8 @@ nav.navigation{
 .breadcrumbs a{
   position: relative;  
   display: inline-block;
+  vertical-align: middle;
+  margin-top: 2px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -498,20 +507,12 @@ nav.navigation{
 }
 .breadcrumbs a:nth-child(1){
   font-size: 0;
-  width: 0px;
-  height: 0px;
-  margin-right: 52px;
-}
-.breadcrumbs a:nth-child(1)::before{
-  position: absolute;
-  content: "";
+  margin-right: 39px;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  top: -3px;
-  right: -16px;
   width: 15px;
   height: 12px;
-   background-position: -241px -55px;
+  background-position: -241px -55px;
 }
 .breadcrumbs a:nth-child(2)::before{
   position: absolute;
@@ -535,7 +536,7 @@ nav.navigation{
   height: 12px;
   background-position: -145px -92px;
 }
-.categories{          /*заканчивается раздел на 788*/
+.categories{        
   min-height: 410px;
   margin-bottom: 56px;
 }
@@ -573,9 +574,14 @@ nav.navigation{
   top: 29px;
   left: 190px;
 }
+.categories span{
+
+}
 a.link-to-category{
   display: inline-block;
-  padding: 10px 24px;
+  text-align: center;
+  min-width: 135px;
+  padding: 10px 0;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -584,7 +590,7 @@ a.link-to-category{
   color: #fff;
   background-color: rgba(0,0,0,0.1);
 }
-a.link-to-category:hover{                                            /*не получается настроить этот блак по макету, т.е. как в макете*/
+a.link-to-category:hover{                                          
 	background-color: rgba(0,0,0,0.2);
 }
 a.link-to-category:active{
@@ -659,7 +665,7 @@ a.link-to-category:active{
 .slider h3{
   margin: 0;
   margin-top: 30px;
-  margin-bottom: 9px;
+  margin-bottom: 0;
   color: #fff;
   font-size: 36px;
   line-height: 30px;
@@ -671,7 +677,7 @@ a.link-to-category:active{
   color: #fff;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 20px;
   font-style: normal;
   font-weight: bold;
 }
@@ -725,6 +731,26 @@ a.link-to-category:active{
     border: 2px solid #fff;
     background-color: #fff;
     margin-left: 10px;  
+}
+label.punchers::before{
+  position: absolute;
+  content: "";
+  background: url("../img/sprite.png") no-repeat;
+  width: 22px;
+  height: 40px;
+  bottom: 73px;
+  right: 255px;
+  background-position: -206px -87px;
+}
+label.drils::before{
+  position: absolute;
+  content: "";
+  background: url("../img/sprite.png") no-repeat;
+  width: 22px;
+  height: 40px;
+  bottom: 73px;
+  left: 260px;
+  background-position: -89px -166px;
 }
 #punchers:checked ~ .slider-controls>.punchers,
 #drils:checked ~ .slider-controls>.drils{
@@ -933,7 +959,7 @@ form>div{
   width: 23px;
   height: 23px;
   background-position: -81px -10px;
-  opacity: 0.9;                             /*В покое немного прозрачнее, чем при наведении*/
+  opacity: 0.9;                             
  }
  .manufacture-filtr input[type="checkbox"]+label>span.checkbox-indicator:hover::before{
   background-position: -124px -10px;
@@ -1045,7 +1071,7 @@ form>div{
   min-height: 80px;
   padding: 25px 0 25px 29px;
   background-color: #f7f3ec;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .manufacturers-header h2,
 .goods-header h2{
@@ -1073,7 +1099,7 @@ a.all-manufacturers{
   background-color: #f7f3ec;
   box-sizing: border-box;
   padding: 9px 0 9px 0;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .filtering-and-sorting>h3,
@@ -1151,23 +1177,23 @@ button.down-sorting{
   border-top: 0 solid #ee3643;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-bottom: 9px solid #ee3643;
+  border-bottom: 10px solid #ee3643;
 }
 button.active{
   border-bottom-color: #ee3643;
   border-top-color: #ee3643;
 }
 .up-sorting:hover::before{
-  border-bottom: 12px solid #000;
+  border-bottom: 10px solid #000;
 }
 .down-sorting:hover::before{
-  border-top: 12px solid #000;
+  border-top: 10px solid #000;
 }
 .up-sorting:active::before{
-  border-bottom: 12px solid #ee3643;
+  border-bottom: 10px solid #ee3643;
 }
 .down-sorting:active::before{
-  border-bottom: 12px solid #ee3643;
+  border-top: 10px solid #ee3643;
 }
 .down-sorting::before{
   position: absolute;
@@ -1178,7 +1204,7 @@ button.active{
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 9px solid #c6c2bd;
+  border-top: 10px solid #c6c2bd;
   border-bottom: 0 solid #c6c2bd;
 
 }
@@ -1206,7 +1232,7 @@ button.active{
 .goods-catalog .goods-item{
   float: left;
   margin-left: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 .goods-catalog .goods-item:nth-child(n+7){
   margin-bottom: 0px;
@@ -1434,7 +1460,10 @@ border-color: #ee3643;
   font-size: 13px;
   line-height: 24px;
 }
-.popular-manufacturers{       /*начинается на 1315px*/
+.about-category span{
+  letter-spacing: 0.12px;
+}
+.popular-manufacturers{       
   min-height: 395px;
   margin-bottom: 156px;
   padding: 0;
@@ -1641,7 +1670,7 @@ border-color: #ee3643;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   margin-top: 6px;
 }
 .service-description p{
@@ -1650,6 +1679,7 @@ border-color: #ee3643;
   font-size: 13px;
   line-height: 24px;
   color: #000;
+  margin-left: -3px;
 }
 a.service-reguest{
   width: 195px;
@@ -1725,7 +1755,7 @@ a.service-reguest{
 .about-company ul{
   padding: 0;
   margin-top: 22px;
-  margin-bottom: 34px;
+  margin-bottom: 40px;
 }
 .about-company li{
   position: relative;
@@ -1733,7 +1763,7 @@ a.service-reguest{
   list-style: none;
   font-size: 18px;
   line-height: 20px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 .about-company li::before{
   position: absolute;
@@ -2007,6 +2037,10 @@ a.to-more-information{
   display: block;
   border-radius: 3px;
 }
+button:active{
+  border:1px solid transparent;
+}
+
 a.to-more-information:hover{
   background-color: #ca2c37;
 }
@@ -2103,20 +2137,29 @@ button.we-stray:hover{
 }
 .modal-map{
   display: none;
-  width: 600px;
+  width: 940px;
   height: 450px;
   background-color: #fff;
   position: fixed;
   top: 50%;
   left: 50%;
   margin-top: -225px; 
-  margin-left: -300px; 
+  margin-left: -470px; 
   z-index: 30;
 }
 .appear{
   display: block;
+  animation-name: ap;
+  animation-duration: 2s;
 }
-
+@ap{
+  from{
+    background-color: red;
+  }
+  to{
+    background-color: yellow;
+  }
+}
 /*стили, которые надо будет удалить*/
 
 div, article, section, a { 
