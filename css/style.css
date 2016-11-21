@@ -2041,7 +2041,7 @@ a.to-more-information{
   border-radius: 3px;
 }
 button:active{
-  border:1px solid transparent;
+  border:none;
 }
 
 a.to-more-information:hover{
@@ -2155,6 +2155,7 @@ button.we-stray:hover{
   animation-name: ap;
   animation-duration: 2s;
 }
+
 @keyframes ap{
   from{
     left: -50%;
@@ -2165,6 +2166,6 @@ button.we-stray:hover{
 }
 /*стили, которые надо будет удалить*/
 
-div, article, section, a { 
+/*div, article, section, a { 
 outline: 1px solid red; 
-}
+}*/
