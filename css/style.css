@@ -806,7 +806,7 @@ label.drils::before{
   margin-bottom: 7px;
 }
 .price-filtr{
-  height: 187px;
+  min-height: 185px;
   box-sizing: border-box;
 }
 .price-filtr h5{
@@ -818,9 +818,9 @@ label.drils::before{
 }
 .range-bounds{
   background-color: #f7f3ec;
-  height: 76px;
+  height: 73px;
   margin-bottom: 10px;
-  padding-top: 25px;
+  padding-top: 19px;
   box-sizing: border-box;
 }
 .range-bounds span{
@@ -949,7 +949,7 @@ form>div{
  .manufacture-checkbox{
  display: none;
  }
-  .manufacture-filtr input[type="checkbox"]+label>span.checkbox-indicator::before{      /*для спана в составе label, который идет за checkbox*/
+  .manufacture-checkbox+label>.checkbox-indicator::before{      /*для спана в составе label, который идет за checkbox*/
   position: absolute;
   content: "";
   top: -3px;
@@ -961,10 +961,10 @@ form>div{
   background-position: -81px -10px;
   opacity: 0.9;                             
  }
- .manufacture-filtr input[type="checkbox"]+label>span.checkbox-indicator:hover::before{
+ .manufacture-checkbox+label>.checkbox-indicator:hover::before{
   background-position: -124px -10px;
  }
-  .manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator::before{
+  .manufacture-checkbox:checked+label>.checkbox-indicator::before{
   position: absolute;
   content: "";
   top: -3px;
@@ -976,7 +976,7 @@ form>div{
   background-position: -167px -10px;  
   opacity: 0.9;
  }
- .manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator:hover::before{
+ .manufacture-checkbox:checked+label>.checkbox-indicator:hover::before{
   background-position: -214px -10px;
  }
  .power-filtr{
@@ -988,7 +988,7 @@ form>div{
  .radio-indicator{
   position: relative;
  }
-  .power-filtr input[type="radio"]+label>span.radio-indicator::before{      /*для спана в составе label, который идет за checkbox*/
+  .power-radio+label>.radio-indicator::before{      /*для спана в составе label, который идет за checkbox*/
   position: absolute;
   content: "";
   top: -3px;
@@ -1000,10 +1000,10 @@ form>div{
   background-position: -261px -10px;
   opacity: 0.9;
  }
-  .power-filtr input[type="radio"]+label>span.radio-indicator:hover::before{
+  .power-radio+label>.radio-indicator:hover::before{
   background-position: -100px -55px;
   }
-  .power-filtr input[type="radio"]:checked+label>span.radio-indicator::before{
+  .power-radio:checked+label>.radio-indicator::before{
   position: absolute;
   content: "";
   top: -3px;
@@ -1015,19 +1015,19 @@ form>div{
   background-position: -10px -55px;
   opacity: 0.9; 
  }
- .power-filtr input[type="radio"]:checked+label>span.radio-indicator:hover::before{
+ .power-radio:checked+label>.radio-indicator:hover::before{
   background-position: -55px -55px;
  }
-  .power-filtr input[type="radio"]:checked+label>span.radio-indicator:active::before{               
+  .power-radio:checked+label>.radio-indicator:active::before{               
   opacity: 0.3;
  }
-   .power-filtr input[type="radio"]+label>span.radio-indicator:active::before{               
+   .power-radio+label>.radio-indicator:active::before{               
   opacity: 0.3;
  }
- .manufacture-filtr input[type="checkbox"]+label>span.checkbox-indicator:active::before{
+ .manufacture-checkbox+label>.checkbox-indicator:active::before{
   opacity: 0.3;
  }
-.manufacture-filtr input[type="checkbox"]:checked+label>span.checkbox-indicator:active::before{
+.manufacture-checkbox:checked+label>.checkbox-indicator:active::before{
   opacity: 0.3;
  }
 .goods-filtr-form .submit{
@@ -1044,7 +1044,7 @@ form>div{
 }
 
 
-.goods{                   /* начнем с 866 и закончим 1266*/
+.goods{                  
   min-height: 400px;
   padding: 0;
   margin-bottom: 45px;
@@ -1327,16 +1327,19 @@ button.active{
   display: none;
   position: absolute;
   width: 220px;
-  min-height: 182px;
+  min-height: 170px;
   background-color: #fff;
   padding-top: 45px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-/*.goods-item:hover .pop-price-window{
+.goods-item:hover .pop-price-window{
 display: block;
 z-index: 10;
-}*/
+}
+.goods-item:hover .old-price{
+  visibility: hidden;
+}
 .pop-price-window a{
   display: block;
   text-decoration: none;
@@ -2152,12 +2155,12 @@ button.we-stray:hover{
   animation-name: ap;
   animation-duration: 2s;
 }
-@ap{
+@keyframes ap{
   from{
-    background-color: red;
+    left: -50%;
   }
   to{
-    background-color: yellow;
+    left: 50%;
   }
 }
 /*стили, которые надо будет удалить*/
