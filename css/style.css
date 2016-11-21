@@ -2155,7 +2155,11 @@ button.we-stray:hover{
   animation-name: ap;
   animation-duration: 2s;
 }
-
+.map_ap{
+  display: block;
+  animation-name: map_appearance;
+  animation-duration: 2s;
+}
 @keyframes ap{
   from{
     left: -50%;
@@ -2164,6 +2168,15 @@ button.we-stray:hover{
     left: 50%;
   }
 }
+@keyframes map_appearance{
+  from{
+    top: -50%;
+  }
+  to{
+    top: 50%;
+  }
+}
+
 /*стили, которые надо будет удалить*/
 
 /*div, article, section, a { 

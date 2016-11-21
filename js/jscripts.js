@@ -53,11 +53,11 @@
   	location_link.addEventListener("click", function(event){
   		event.preventDefault();
   		console.log("Кликнули по карте");
-  		big_map.classList.add("appear");
+  		big_map.classList.add("map_ap");
   		console.log("5");
   	});
   	close_map.addEventListener("click", function(event){
   		event.preventDefault();
   		console.log("3");
-  		big_map.classList.remove("appear");
+  		big_map.classList.remove("map_ap");
   	});
