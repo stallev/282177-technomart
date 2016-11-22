@@ -519,7 +519,7 @@ nav.navigation{
   background-color: #fff;
   border: 0;
   color: #000;
-  margin-right: 37px;
+  margin-right: 35px;
 }
 .breadcrumbs a:nth-child(1){
   font-size: 0;
@@ -1075,7 +1075,7 @@ form>div{
 .goods-catalog{
   min-height: 400px;
   padding: 0;
-  margin-bottom: 120px;
+  margin-bottom: 60px;
   margin-left: 220px;
 }
 
@@ -1505,21 +1505,26 @@ border-color: #bdc6ca;
 border-color: #ee3643;
 }
 .about-category{
-  margin-bottom: 73px;
+  
 }
 .about-category{
-  margin-bottom: 66px;
+  padding-top: 68px;
+  background-color: #f2f6f8;
+  padding-bottom: 68px;
 }
 .about-category h2{
   margin-top: 0;
   margin-left: 2px;
   margin-bottom: 28px;
+  letter-spacing: -0.32px;
 }
 .about-category p{
   margin: 0;
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
+  letter-spacing: 0.1px;
+  padding-left: 2px;
 }
 .about-category span{
   letter-spacing: 0.12px;
