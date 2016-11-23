@@ -2222,6 +2222,108 @@ button.we-stray:hover{
   margin-left: -470px; 
   z-index: 30;
 }
+.goods-buying-notification{
+  display: block;
+  position: relative;
+  width: 620px;
+  height: 282px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -225px; 
+  margin-left: -310px; 
+  z-index: 30;
+  border-top: 7px solid #ee3643;
+  box-sizing: border-box;
+}
+.upper-notification{
+  min-height: 163px;
+}
+.notification-text{
+  display: block;
+  float: left; 
+  font-size: 30px;
+  line-height: 18px;
+  padding: 68px 40px 74px 0px;
+}
+.shopping-checkbox{
+  display: block;
+  float: left;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #63a63e;
+  background-color: #63a63e;
+  border-radius: 32px;
+  margin: 47px 33px 50px 80px; 
+}
+.shopping-checkbox::before{
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 1px;
+  right: 11px;
+  top: 29px;
+}
+.shopping-checkbox::after{
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 1px;
+  right: 28px;
+  top: 31px;
+}
+.shopping-checkbox::after{
+  transform:rotate(45deg);
+}
+.shopping-checkbox::before{
+  transform:rotate(-45deg);
+}
+.notification-buttons{
+  min-height: 112px;
+  background-color: #f1f1f1;
+}
+a.make-order{
+  margin-left: 80px;
+  margin-right: 20px;
+}
+a.make-order,
+a.do-shopping{
+  display: block;
+  float: left;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 0;
+  width: 220px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  margin-top: 37px;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+}
+a.make-order:hover,
+a.do-shopping:hover{
+  background-color: #ee3643;
+  border-color: #ee3643;
+  color: #fff;
+}
+a.make-order:active,
+a.do-shopping:active{
+  background-color: #ca2c37;
+  border-color: #ca2c37;
+  color: #fff;
+}
+a.active{
+
+}
 .appear{
   display: block;
   animation-name: ap;
@@ -2232,6 +2334,17 @@ button.we-stray:hover{
   animation-name: map_appearance;
   animation-duration: 2s;
 }
+.notification_ap{
+  display: block;  
+  animation-name: notification_appearance;
+  animation-duration: 2s;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -141px; 
+  margin-left: -310px; 
+  z-index: 30;
+}
 @keyframes ap{
   from{
     left: -50%;
@@ -2241,6 +2354,14 @@ button.we-stray:hover{
   }
 }
 @keyframes map_appearance{
+  from{
+    top: -50%;
+  }
+  to{
+    top: 50%;
+  }
+}
+@keyframes notification_appearance{
   from{
     top: -50%;
   }

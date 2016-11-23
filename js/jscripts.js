@@ -10,6 +10,9 @@
   	var location_link=document.querySelector(".small-map");
   	var big_map=document.querySelector(".modal-map");
   	var close_map=document.querySelector(".modal-map>.window-close-button");
+    var notification_link=document.querySelector("a.buy-item");
+    var notification=document.querySelector(".goods-buying-notification");
+    var close_notification=document.querySelector(".goods-buying-notification>.window-close-button");
 
   	link.addEventListener("click", function(event){
 	  	event.preventDefault();
@@ -61,3 +64,14 @@
   		console.log("3");
   		big_map.classList.remove("map_ap");
   	});
+    notification_link.addEventListener("click", function(event){
+      event.preventDefault();
+      console.log("Кликнули по карточке товара");
+      notification.classList.add("notification_ap");
+      console.log("8");
+    });
+    close_notification.addEventListener("click", function(event){
+      event.preventDefault();
+      console.log("9");
+      notification.classList.remove("notification_ap");
+    });
