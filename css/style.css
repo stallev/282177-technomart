@@ -2251,6 +2251,6 @@ button.we-stray:hover{
 
 /*стили, которые надо будет удалить*/
 
-div, article, section, a { 
+/*div, article, section, a { 
 outline: 1px solid red; 
-}
+}*/
