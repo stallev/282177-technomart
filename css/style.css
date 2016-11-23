@@ -570,19 +570,13 @@ nav.navigation{
 .tile h3{
   position: relative;
   margin-left: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   margin-top: 20px;
   color: #fff;
 }
-.tile span{
-  position: absolute;
-  top: 63px;
-  left: 25px;
-  display: block;
-  
-}
 .tile{
   position: relative;
+  box-sizing: border-box;
 }
 .tile::before{
   position: absolute;
@@ -606,6 +600,8 @@ a.link-to-category{
   border-radius: 3px;  
   color: #fff;
   background-color: rgba(0,0,0,0.1);
+  margin-top: 0px;
+  margin-left: 24px;
 }
 a.link-to-category:hover{                                          
 	background-color: rgba(0,0,0,0.2);
