@@ -197,6 +197,7 @@ input.search-submit{
 .bookmarks a:active,
 .cart a:active{
   background-color: #161d29;
+  opacity: 0.6;
 }
 .checkout a{
   background-color: #63a63e;
@@ -291,8 +292,8 @@ input.search-submit{
   position: absolute;
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
-  top: 5px;
-  left: 11px;
+  top: 9px;
+  left: 13px;
   width: 19px;
   height: 19px;
   background-position: -132px -129px;
@@ -329,7 +330,7 @@ input.search-submit{
   display: inline-block;
   vertical-align: top;
   text-align: left;
-  padding: 9px 25px 10px 72px;
+  padding: 11px 25px 10px 72px;
   box-sizing: border-box;
 }
 p.address{
@@ -376,8 +377,8 @@ a.personal-cabinet:hover{
   min-height: 38px;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 10px 60px 15px 47px;
-  margin-bottom: 8px;
+  padding: 12px 60px 15px 47px;
+  margin-bottom: 6px;
 }
 .userlink{
   position: relative;
@@ -452,9 +453,11 @@ a.personal-cabinet{
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
+  background-color: #f1f5f7;
+  text-decoration: underline;
 }
 .my-orders{
-  margin-right: 36px;
+  margin-right: 34px;
 }
 .my-orders:after{
   position: absolute;
@@ -551,6 +554,9 @@ nav.navigation{
   width: 8px;
   height: 12px;
   background-position: -145px -92px;
+}
+.breadcrumbs a:nth-child(3){
+  margin-right: 42px;
 }
 .categories{        
   min-height: 410px;
@@ -837,7 +843,7 @@ label.drils::before{
   background-color: #f7f3ec;
   height: 73px;
   margin-bottom: 10px;
-  padding-top: 19px;
+  padding-top: 23px;
   box-sizing: border-box;
 }
 .range-bounds span{
@@ -1777,17 +1783,19 @@ a.service-reguest{
 .slide1 .service-image{
   width: 468px;
   height: auto;
-  background: url("../img/delivery-symbol.jpg") no-repeat;
+  background-color: #f2f6f8;
+  background-image: url("../img/delivery-symbol.png");
+  background-repeat: no-repeat;
 }
 .slide2 .service-image{
   width: 389px;
   height: auto;
-  background: url("../img/guarantee-symbol.jpg") no-repeat;
+  background: url("../img/guarantee-symbol.png") no-repeat;
 }
 .slide3 .service-image{
   width: 465px;
   height: auto;
-  background: url("../img/credit-symbol.jpg") no-repeat;
+  background: url("../img/credit-symbol.png") no-repeat;
 }
 
 .delivery-service{
@@ -2156,7 +2164,8 @@ button.we-stray:hover{
   height: 4px;
   background-color: #ee3643;
   border-radius: 1px;
-  right: 1px;
+  right: 4px;
+  top: 8px;
 }
 .window-close-button::after{
   transform:rotate(45deg);
@@ -2197,6 +2206,7 @@ button.we-stray:hover{
   background-color: #b22832;
 }
 .stray-form{
+  display: none;
   background-color: #fff;
   position: fixed;
   top: 50%;
@@ -2204,7 +2214,7 @@ button.we-stray:hover{
   margin-top: -215px; 
   margin-left: -310px; 
   z-index: 30;
-  display: none;
+  box-shadow: 0px 20px 40px 0px rgba(41,52,73,0.75);
 }
 .modal-map{
   display: none;
@@ -2217,9 +2227,10 @@ button.we-stray:hover{
   margin-top: -225px; 
   margin-left: -470px; 
   z-index: 30;
+  box-shadow: 0px 20px 40px 0px rgba(41,52,73,0.75);
 }
 .goods-buying-notification{
-  display: block;
+  display: none;
   position: relative;
   width: 620px;
   height: 282px;
@@ -2232,6 +2243,7 @@ button.we-stray:hover{
   z-index: 30;
   border-top: 7px solid #ee3643;
   box-sizing: border-box;
+  box-shadow: 0px 20px 40px 0px rgba(41,52,73,0.75);
 }
 .upper-notification{
   min-height: 163px;
