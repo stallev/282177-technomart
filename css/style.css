@@ -1061,7 +1061,7 @@ form>div{
   .power-radio:checked+label.radio-indicator:active::before{               
   opacity: 0.3;
  }
-   .power-radio+label.radio-indicator:active::before{               
+  .power-radio+label.radio-indicator:active::before{               
   opacity: 0.3;
  }
  .manufacture-checkbox+label.checkbox-indicator:active::before{
