@@ -1774,7 +1774,10 @@ border-color: #ee3643;
   line-height: 24px;
   padding-right: 19px;
   color: #000;
-  margin-left: -3px;
+  margin-left: -3px;  
+}
+.slides p{
+  overflow: hidden;
 }
 a.service-reguest{
   width: 195px;
@@ -1823,7 +1826,7 @@ a.service-reguest{
   float: left;
 }
 
-.about-us>.container{                                   /*начнется на 2397px,  закончится на 2765*/
+.about-us>.container{                                   
   min-height: 368px;
   margin-bottom: 85px;
 }
