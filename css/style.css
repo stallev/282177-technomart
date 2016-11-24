@@ -351,6 +351,14 @@ a.registration{
   width: 150px;
   padding: 11px 10px 11px 24px;
 }
+a.registration:hover,
+a.login:hover{
+  color: #ee3643;
+}
+a.registration:active,
+a.login:active{
+  opacity: 0.3;
+}
 a.my-orders:hover,
 a.personal-cabinet:hover{
  color: #ee3643;
@@ -433,10 +441,12 @@ a.logout{
   display: block;
   float: right;
   font-size: 0;
-
 }
 .logout:hover::after{
   background-position: -91px -129px;
+}
+.logout:active::after{
+  background-position: -50px -129px;
 }
 .customers-information{
   margin-left: 18px;
