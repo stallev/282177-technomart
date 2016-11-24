@@ -114,7 +114,7 @@ div.uppers{
   width: 100%;
   background-color: #293449;
   color: #fff;
-  font-size: 17px;
+  font-size: 16px;
   text-transform: capitalize;
   padding: 12px 15px 11px 52px;
   -moz-box-sizing: border-box;
@@ -256,7 +256,7 @@ input.search-submit{
   margin-bottom: 60px;
 }
 .middle-header>div.container{
-  min-height: 155px;
+  min-height: 158px;
 }
 .store-descripton, .store-contacts, .userblock{
   display: inline-block;
@@ -835,7 +835,7 @@ label.drils::before{
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
-  margin-top: 13px;
+  margin-top: 17px;
   margin-bottom: 7px;
 }
 .price-filtr{
@@ -940,7 +940,7 @@ li>input{
 }
 
 .manufacture-filtr{
-	padding-bottom: 13px;
+	padding-bottom: 9px;
 }
 .manufacture-filtr h5{
   margin-top: 20px;
@@ -1077,10 +1077,10 @@ form>div{
   font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
-  padding: 9px 40px;
+  padding: 9px 39px;
   border: 1px solid #e5e5e5;
   background-color: #fff;
-  margin-top: 60px;
+  margin-top: 65px;
 }
 
 
@@ -1538,6 +1538,7 @@ border-color: #ee3643;
   margin-left: 2px;
   margin-bottom: 25px;
   letter-spacing: -0.32px;
+  color: #000;
 }
 .about-category p{
   margin: 0;
