@@ -247,7 +247,7 @@ input.search-submit{
  padding-bottom: 60px;
 }
 .catalog-middle-header{
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 }
 .index-middle-header{
   padding-bottom: 60px;	
@@ -504,7 +504,7 @@ nav.navigation{
   background-color: #1d2739;
 }
 .breadcrumbs{
-  min-height: 42px;
+  min-height: 44px;
 }
 .breadcrumbs a{
   position: relative;  
@@ -533,24 +533,24 @@ nav.navigation{
   height: 12px;
   background-position: -241px -55px;
 }
-.breadcrumbs a:nth-child(2)::before{
+.breadcrumbs a::before{
   position: absolute;
   content: "";
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   top: 3px;
-  left: -19px;
+  right: -24px;
   width: 8px;
   height: 12px;
   background-position: -145px -92px;
 }
-.breadcrumbs a:nth-child(n+3)::before{
+.breadcrumbs a:nth-child(n+4)::before{
   position: absolute;
   content: "";
   background-image: url("../img/sprite.png");
   background-repeat: no-repeat;
   top: 3px;
-  left: -28px;
+  left: -10000px;
   width: 8px;
   height: 12px;
   background-position: -145px -92px;
@@ -636,7 +636,7 @@ a.link-to-category:active{
   width: 44px;
   height: 65px;
   background-position: -343px -91px;
-  left: 210px;
+  left: 215px;
 }
 .equipment{
   background-color: #4aafde;
@@ -647,7 +647,8 @@ a.link-to-category:active{
   width: 75px;
   height: 61px;
   background-position: -313px -10px;
-  left: 195px;
+  left: 198px;
+  top: 32px;
 }
 .techniks{
   background-color: #cc79d1;
@@ -702,7 +703,7 @@ a.link-to-category:active{
   font-size: 18px;
   line-height: 20px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
 }
 .slider a{
   position: absolute;
@@ -953,7 +954,7 @@ form>div{
   padding-left: 40px;
   cursor: pointer;
  }
- .label-checkbox-manufacturer{
+ .checkbox-indicator{
   font-family: 'PT Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
@@ -973,7 +974,7 @@ form>div{
  .manufacture-checkbox{
  display: none;
  }
-  .manufacture-checkbox+label>.checkbox-indicator::before{      /*для спана в составе label, который идет за checkbox*/
+  .manufacture-checkbox+label.checkbox-indicator::before{      /*для спана в составе label, который идет за checkbox*/
   position: absolute;
   content: "";
   top: -3px;
@@ -985,10 +986,10 @@ form>div{
   background-position: -81px -10px;
   opacity: 0.9;                             
  }
- .manufacture-checkbox+label>.checkbox-indicator:hover::before{
+ .manufacture-checkbox+label.checkbox-indicator:hover::before{
   background-position: -124px -10px;
  }
-  .manufacture-checkbox:checked+label>.checkbox-indicator::before{
+  .manufacture-checkbox:checked+label.checkbox-indicator::before{
   position: absolute;
   content: "";
   top: -3px;
@@ -1000,7 +1001,7 @@ form>div{
   background-position: -167px -10px;  
   opacity: 0.9;
  }
- .manufacture-checkbox:checked+label>.checkbox-indicator:hover::before{
+ .manufacture-checkbox:checked+label.checkbox-indicator:hover::before{
   background-position: -214px -10px;
  }
  .power-filtr{
@@ -1011,8 +1012,14 @@ form>div{
  }
  .radio-indicator{
   position: relative;
+  font-family: 'PT Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase; 
  }
-  .power-radio+label>.radio-indicator::before{      /*для спана в составе label, который идет за checkbox*/
+  .power-radio+label.radio-indicator::before{      /*для спана в составе label, который идет за checkbox*/
   position: absolute;
   content: "";
   top: -3px;
@@ -1024,10 +1031,10 @@ form>div{
   background-position: -261px -10px;
   opacity: 0.9;
  }
-  .power-radio+label>.radio-indicator:hover::before{
+  .power-radio+label.radio-indicator:hover::before{
   background-position: -100px -55px;
   }
-  .power-radio:checked+label>.radio-indicator::before{
+  .power-radio:checked+label.radio-indicator::before{
   position: absolute;
   content: "";
   top: -3px;
@@ -1039,19 +1046,19 @@ form>div{
   background-position: -10px -55px;
   opacity: 0.9; 
  }
- .power-radio:checked+label>.radio-indicator:hover::before{
+ .power-radio:checked+label.radio-indicator:hover::before{
   background-position: -55px -55px;
  }
-  .power-radio:checked+label>.radio-indicator:active::before{               
+  .power-radio:checked+label.radio-indicator:active::before{               
   opacity: 0.3;
  }
-   .power-radio+label>.radio-indicator:active::before{               
+   .power-radio+label.radio-indicator:active::before{               
   opacity: 0.3;
  }
- .manufacture-checkbox+label>.checkbox-indicator:active::before{
+ .manufacture-checkbox+label.checkbox-indicator:active::before{
   opacity: 0.3;
  }
-.manufacture-checkbox:checked+label>.checkbox-indicator:active::before{
+.manufacture-checkbox:checked+label.checkbox-indicator:active::before{
   opacity: 0.3;
  }
 .goods-filtr-form .submit{
@@ -1077,7 +1084,7 @@ form>div{
 .goods-catalog{
   min-height: 400px;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 59px;
   margin-left: 220px;
 }
 
@@ -1101,7 +1108,7 @@ h2.name-goods-category{
 .goods-header{
   box-sizing: border-box;
   min-height: 90px;
-  padding: 32px 0 33px 29px;
+  padding: 33px 0 33px 29px;
   background-color: #f7f3ec;
   margin-bottom: 23px;
 }
@@ -1232,6 +1239,7 @@ button.down-sorting{
 button.active{
   border-bottom-color: #ee3643;
   border-top-color: #ee3643;
+  color: #ee3643;
 }
 .up-sorting:hover::before{
   border-bottom: 8px solid #000;
@@ -1259,20 +1267,19 @@ button.active{
 
 }
 
-.goods-list{
-
+.goods{
+  font-size: 0;
 }
-.goods .goods-item:last-child{
+.goods .goods-item:nth-child(4n){
   margin-right: 0;
 }
 .goods-item{
   position: relative;
   box-sizing: border-box;
   width: 220px;
-  min-height: 315px;
+  min-height: 317px;
   display: inline-block;
   vertical-align: top;
-  float: left;
   border:1px solid #e5e5e5;
   text-align: center;
 }
@@ -1286,10 +1293,13 @@ button.active{
 .goods .goods-item{
   margin-right: 20px;
 }
+.goods .goods-item:nth-child(n+5){
+  margin-top: 20px;
+}
 .goods-catalog .goods-item{
   float: left;
   margin-left: 20px;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
 }
 .goods-catalog .goods-item:nth-child(n+7){
   margin-bottom: 0px;
@@ -1349,7 +1359,7 @@ button.active{
   width: 80px;
   margin: 0 auto;
   margin-bottom: 15px;
-  margin-top: 4px;
+  margin-top: 10px;
   padding: 10px 25px 10px 28px;
   font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
@@ -1465,7 +1475,7 @@ a.buy-item:active{
   clear: both;
 }
 .paginator{
-  padding-top: 53px;
+  padding-top: 51px;
   padding-left: 20px;
 }
 .paginator ul{
@@ -1517,7 +1527,7 @@ border-color: #ee3643;
 .about-category h2{
   margin-top: 0;
   margin-left: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   letter-spacing: -0.32px;
 }
 .about-category p{
@@ -1578,7 +1588,7 @@ border-color: #ee3643;
 .manufacturer a{
   position: relative;
   display: block;
-  min-height: 143px;
+  min-height: 145px;
   line-height: 135px;
 }
 .manufacturer a>img{ 
@@ -1810,7 +1820,8 @@ a.service-reguest{
 .about-company{                        
   width: 540px;
   float: left;
-  padding-right: 20px;
+  padding-right: 18px;
+  padding-left: 2px;
   box-sizing: border-box;
 }
 .about-company h2,
@@ -1826,13 +1837,13 @@ a.service-reguest{
   font-size: 13px;
   line-height: 24px;
   font-style: normal;
-  margin-top: 25px;
+  margin-top: 26px;
   margin-bottom: 6px;
   letter-spacing: 0.1px;
 }
 .about-company ul{
   padding: 0;
-  margin-top: 22px;
+  margin-top: 20px;
   margin-bottom: 38px;
 }
 .about-company li{
@@ -1942,13 +1953,13 @@ button.form-straying-submit,
   background-color: #ca2c37;
 }
 .footer-upper p{
-  padding-top: 10px;
   color: #f1f5f7;
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
   clear: both;
-  padding-top: 30px;
+  padding-top: 32px;
+  padding-left: 3px;
 }
 .footer-upper li{
   display: inline-block;
@@ -2328,9 +2339,6 @@ a.do-shopping:active{
   background-color: #ca2c37;
   border-color: #ca2c37;
   color: #fff;
-}
-a.active{
-
 }
 .appear{
   display: block;
