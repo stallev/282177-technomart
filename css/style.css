@@ -2869,9 +2869,27 @@ a.make-order:active,a.do-shopping:active
   top:50%;
   z-index:30;
 }
-
-to
-{
-  left:50%;
-  top:50%;
+@keyframes ap{
+  from{
+    left: -50%;
+  }
+  to{
+    left: 50%;
+  }
+}
+@keyframes map_appearance{
+  from{
+    top: -50%;
+  }
+  to{
+    top: 50%;
+  }
+}
+@keyframes notification_appearance{
+  from{
+    top: -50%;
+  }
+  to{
+    top: 50%;
+  }
 }
