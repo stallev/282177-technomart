@@ -2644,11 +2644,11 @@ button.we-stray:hover
   background-color:transparent;
   border:0;
   font-size:0;
-  height:0;
+  height:19px;
   position:absolute;
-  right:1px;
+  right:8px;
   top:7px;
-  width:0;
+  width:19px;
 }
 
 .window-close-button::after,.window-close-button::before
@@ -2658,7 +2658,7 @@ button.we-stray:hover
   content:"";
   height:4px;
   position:absolute;
-  right:4px;
+  right:-3px;
   top:8px;
   width:25px;
 }
