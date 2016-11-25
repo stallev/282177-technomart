@@ -1,7 +1,7 @@
 var cartOpen = document.querySelectorAll(".buy-item");
 var cartPopup = document.querySelector(".goods-buying-notification");
 var cartClose = cartPopup.querySelector(".goods-buying-notification>.window-close-button");
-var cartContinue = cartPopup.querySelector(".make-order")
+var cartContinue = cartPopup.querySelector(".make-order");
 
 if (cartOpen && cartPopup && cartClose) {
   for (var i=0; i<cartOpen.length; i++) {

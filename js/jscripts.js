@@ -10,6 +10,7 @@
     var big_map=document.querySelector(".modal-map");
     var close_map=document.querySelector(".modal-map>.window-close-button");
 
+
     link.addEventListener("click", function(event){
       event.preventDefault();
       console.log("2");
