@@ -29,8 +29,7 @@
     "*.json",
     "*.js",
     "js/**/*.js",
-    "img/**/*.svg",
-    "sass/**/*.{sass,scss}"
+    "img/**/*.svg"
   ],
   "engines": {
     "node": "6.10"

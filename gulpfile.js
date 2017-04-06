@@ -78,7 +78,6 @@ gulp.task('build', function(fn){
 gulp.task('server', function(){
   run('build', 'serve');
 });
-
 gulp.task('deploy', function() {
   return gulp.src('build/**/*')
     .pipe(ghPages());
