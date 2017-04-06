@@ -164,7 +164,6 @@ input.search-submit
   background-color:#fff;
   color:#000;
 }
-
 .search-field:focus+input.search-submit
 {
   background-color:inherit;
