@@ -7,3 +7,6 @@ Thumbs.db
 *.psd
 *.ai
 *.pdf
+*.png
+build/
+node_modules/
